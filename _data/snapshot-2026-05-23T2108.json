@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-05-23T21:08:01Z",
+  "date_pt": "2026-05-23",
+  "dot": "green",
+  "checkpoint": {
+    "file": "checkpoint-2026-05-22.log",
+    "summary": {
+      "red": 9,
+      "yellow": 3,
+      "error": 1,
+      "info": 1,
+      "green": 4
+    }
+  },
+  "runtime_state_scan": {
+    "file": "runtime-state-scan-2026-05-23.log",
+    "summary": {
+      "missing": 3,
+      "extra": 3,
+      "mismatch": 0,
+      "stale": 11,
+      "healthy": 14
+    }
+  },
+  "findings": {
+    "open_count": 0,
+    "items": []
+  },
+  "squeeze_prophet": {
+    "status": "OK",
+    "discovered": 547,
+    "evaluated": 50,
+    "ready": 9,
+    "total_pnl_pct": 0.77,
+    "day_pnl_pct": 0.08,
+    "num_positions": 5,
+    "top_picks_summary": [
+      {
+        "symbol": "ANVS",
+        "score": 50,
+        "conviction": "B",
+        "action": "review for entry"
+      },
+      {
+        "symbol": "ASMB",
+        "score": 50,
+        "conviction": "B",
+        "action": "review for entry"
+      },
+      {
+        "symbol": "IMRX",
+        "score": 40,
+        "conviction": "B",
+        "action": "watch"
+      },
+      {
+        "symbol": "EXOZ",
+        "score": 40,
+        "conviction": "B",
+        "action": "watch"
+      },
+      {
+        "symbol": "BYSI",
+        "score": 36,
+        "conviction": "B",
+        "action": "monitor only"
+      }
+    ]
+  },
+  "next_scheduled_task": {
+    "id": "budget-dashboard-sync",
+    "next_run_utc": "2026-05-24T03:07:38Z",
+    "last_run_utc": "2026-05-23T19:08:11Z",
+    "last_result": "completed"
+  },
+  "self_task": {
+    "id": "dashboard-publish-hourly",
+    "next_run_utc": "2026-05-23T22:03:47Z",
+    "last_run_utc": "2026-05-23T21:04:20Z",
+    "last_result": "completed"
+  }
+}

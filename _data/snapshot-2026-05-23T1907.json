@@ -1,0 +1,71 @@
+{
+  "generated_at_utc": "2026-05-23T19:07:25Z",
+  "checkpoint": {
+    "file": "checkpoint-2026-05-22.log",
+    "path": "/Users/michaelmote/Desktop/_audit/checkpoint-2026-05-22.log",
+    "summary": {
+      "RED": 9,
+      "YELLOW": 3,
+      "ERROR": 1,
+      "INFO": 1,
+      "GREEN": 4
+    }
+  },
+  "runtime_state_scan": {
+    "file": "runtime-state-scan-2026-05-23.log",
+    "path": "/Users/michaelmote/Desktop/_audit/runtime-state-scan-2026-05-23.log",
+    "summary": {
+      "missing": 3,
+      "extra": 3,
+      "mismatch": 0,
+      "stale": 11,
+      "healthy": 14
+    }
+  },
+  "v2_dashboard": {
+    "timestamp": "2026-05-23T06:14:23.864557",
+    "candidates_discovered": 547,
+    "candidates_evaluated": 50,
+    "ready_to_trade": 9,
+    "top_picks": [
+      {
+        "symbol": "ANVS",
+        "score": 50,
+        "conviction": "B",
+        "thesis_short": "biotech_potential"
+      },
+      {
+        "symbol": "ASMB",
+        "score": 50,
+        "conviction": "B",
+        "thesis_short": "biotech_potential"
+      },
+      {
+        "symbol": "IMRX",
+        "score": 40,
+        "conviction": "B",
+        "thesis_short": "biotech_potential"
+      },
+      {
+        "symbol": "EXOZ",
+        "score": 40,
+        "conviction": "B",
+        "thesis_short": "biotech_potential"
+      },
+      {
+        "symbol": "BYSI",
+        "score": 36,
+        "conviction": "B",
+        "thesis_short": "biotech_potential"
+      }
+    ]
+  },
+  "health": {
+    "status": "OK",
+    "total_pnl_pct": 0.77,
+    "num_positions": 5,
+    "timestamp": "2026-05-23T18:36:31.967518+00:00"
+  },
+  "open_findings_count": 0,
+  "open_findings": []
+}

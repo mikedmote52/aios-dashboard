@@ -1,0 +1,7 @@
+[2026-05-23T1910Z] push failed: dashboard repo not initialized at ~/Desktop/dashboard (no .git, no remote). bootstrap required.
+2026-05-23T20:07:25Z push failed: ~/Desktop/dashboard is not a git repository (bootstrap required: git init + git remote add origin <pages-repo> + initial commit + git push -u origin main)
+2026-05-23T21:08Z push failed: ~/Desktop/dashboard is not a git repository (bootstrap required: git init + git remote add origin <pages-repo> + initial commit + git push -u origin main)
+2026-05-23T22:09:22Z push failed: ~/Desktop/dashboard is not a git repository (bootstrap required: git init + git remote add origin <pages-repo> + initial commit + git push -u origin main)
+2026-05-24T00:05:47Z push failed: ~/Desktop/dashboard is not a git repository (bootstrap required: git init + git remote add origin <pages-repo> + initial commit + git push -u origin main)
+2026-05-24T01:06:30Z push failed: ~/Desktop/dashboard is not a git repository (bootstrap required: git init + git remote add origin <pages-repo> + initial commit + git push -u origin main)
+2026-05-24T02:07:24Z push skipped: ~/Desktop/dashboard is not a git repository (bootstrap required: git init + git remote add origin <pages-repo> + initial commit + git push -u origin main)

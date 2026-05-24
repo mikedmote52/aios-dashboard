@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>AIOS status &mdash; Saturday, 2026-05-23</title>
+<style>
+  :root {
+    --bg: #0f1115; --card: #161a22; --text: #e6e8ee; --muted: #8a93a6;
+    --line: #232936; --green: #2bd17e; --yellow: #f5b13a; --red: #ff4d4d;
+    --up: #2bd17e; --down: #ff6b6b; --link: #6ea8ff;
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html,body { margin:0; padding:0; background: var(--bg); color: var(--text); }
+  body { font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 640px; margin: 0 auto; padding: 14px 14px 60px 14px; }
+  h1 { font-size: 17px; margin: 0; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px;
+        color: var(--muted); margin: 22px 0 8px 0; font-weight: 600; }
+  h2 .sectionlink { float: right; font-size: 12px; font-weight: 400;
+                     text-transform: none; letter-spacing: 0; }
+  .card { background: var(--card); border: 1px solid var(--line);
+           border-radius: 12px; padding: 14px; }
+  .meta { color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:50%;
+          vertical-align:middle; margin-right:8px; }
+  .dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .dot.yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
+  .dot.red { background: var(--red); box-shadow: 0 0 8px var(--red); }
+  .row { display:flex; justify-content:space-between; gap:12px;
+          padding:8px 0; border-bottom:1px solid var(--line); }
+  .row:last-child { border-bottom: 0; }
+  .row .k { color: var(--muted); font-size: 13px; flex-shrink: 0; }
+  .row .v { text-align: right; font-variant-numeric: tabular-nums; }
+  .audit-row { padding:10px 0; border-bottom:1px solid var(--line); }
+  .audit-row:last-child { border-bottom: 0; }
+  .audit-row .dir { color: var(--muted); font-size: 11px;
+                     text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px; }
+  .audit-row .detail { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; }
+  table td { padding: 8px 4px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  table tr:last-child td { border-bottom: 0; }
+  .picks .sym { font-weight: 600; font-size: 15px; }
+  .picks .score { text-align: right; font-variant-numeric: tabular-nums; width: 48px; color: var(--muted); }
+  .picks .conv { text-align: center; color: var(--muted); width: 30px; }
+  .picks .act { text-align: right; color: var(--muted); font-size: 13px; }
+  .empty { color: var(--muted); font-style: italic; margin: 0; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .arrow.up { color: var(--up); font-variant-numeric: tabular-nums; }
+  .arrow.down { color: var(--down); font-variant-numeric: tabular-nums; }
+  .arrow.flat { color: var(--muted); }
+  .file { color: var(--muted); font-size: 12px; text-align: right; }
+  .footer { color: var(--muted); font-size: 11px; text-align: center;
+             margin-top: 28px; line-height: 1.7; }
+  .footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<h1>AIOS status</h1>
+<div class="meta">Saturday, 2026-05-23 &middot; generated 2026-05-24 02:07 UTC</div>
+
+<h2>Today</h2>
+<div class="card">
+<div class="row"><span class="k">overall</span><span class="v"><span class="dot green"></span>no open findings</span></div><div class="row"><span class="k">open findings</span><span class="v">0</span></div><div class="row"><span class="k">checkpoint reds</span><span class="v">9</span></div><div class="row"><span class="k">automation drift</span><span class="v">3 missing &middot; 11 stale</span></div><div class="row"><span class="k">squeeze prophet</span><span class="v">OK &middot; <span class="arrow up">&#9650; +0.08%</span></span></div>
+</div>
+
+<h2>Last audit <a class="sectionlink" href="file:///Users/michaelmote/Desktop/_audit/checkpoint-2026-05-22.log">checkpoint</a> &middot; <a class="sectionlink" href="file:///Users/michaelmote/Desktop/_audit/runtime-state-scan-2026-05-23.log">state-scan</a></h2>
+<div class="card">
+<div class="audit-row"><div class="dir">operator (~/Desktop top-level repos)</div><div class="detail">checkpoint checkpoint-2026-05-22.log: 9 red &middot; 3 yellow &middot; 1 error &middot; 1 info &middot; 4 green</div></div><div class="audit-row"><div class="dir">runtime automation (launchd / cron / scheduled-tasks)</div><div class="detail">scan runtime-state-scan-2026-05-23.log: 3 missing &middot; 3 extra &middot; 0 mismatch &middot; 11 stale &middot; 14 healthy</div></div><div class="audit-row"><div class="dir">Squeeze Prophet (~/Desktop/mikes-trading-bot)</div><div class="detail">daemon OK &middot; 549 discovered &middot; 50 evaluated &middot; 9 ready</div></div>
+</div>
+
+<h2>Open findings</h2>
+<div class="card">
+<p class="empty">no open findings.</p>
+</div>
+
+<h2>Squeeze Prophet pending</h2>
+<div class="card">
+<table class="picks"><tr><td class="sym">ANVS</td><td class="score">50</td><td class="conv">B</td><td class="act">review for entry</td></tr><tr><td class="sym">ASMB</td><td class="score">50</td><td class="conv">B</td><td class="act">review for entry</td></tr><tr><td class="sym">IMRX</td><td class="score">40</td><td class="conv">B</td><td class="act">watch</td></tr><tr><td class="sym">EXOZ</td><td class="score">40</td><td class="conv">B</td><td class="act">watch</td></tr><tr><td class="sym">BYSI</td><td class="score">36</td><td class="conv">B</td><td class="act">monitor only</td></tr></table>
+</div>
+
+<h2>Next scheduled task</h2>
+<div class="card">
+<div class="row"><span class="k">next non-self</span><span class="v">budget-dashboard-sync</span></div><div class="row"><span class="k">runs at</span><span class="v">2026-05-23 20:07 PT (Sat)</span></div><div class="row"><span class="k">last run</span><span class="v">2026-05-23 12:08 PT (Sat) &middot; completed</span></div><div class="row"><span class="k">this task</span><span class="v">dashboard-publish-hourly &middot; next 2026-05-23 20:03 PT (Sat)</span></div>
+</div>
+
+<div class="footer">
+  <a href="file:///Users/michaelmote/Desktop/_audit/aios-architecture-decision-2026-05.md">AIOS architecture decision &mdash; canonical doc</a><br>
+  read-only &middot; act via Claude Code or Dispatch
+</div>
+
+</body>
+</html>
