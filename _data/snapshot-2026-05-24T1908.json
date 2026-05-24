@@ -1,0 +1,93 @@
+{
+  "generated_at_utc": "2026-05-24T19:08:07Z",
+  "generated_at_local": "2026-05-24 12:08 PT",
+  "local_date": "Sunday, 2026-05-24",
+  "today": {
+    "overall_status": "green",
+    "overall_label": "no open findings",
+    "open_findings": 0,
+    "checkpoint_reds": 9,
+    "automation_missing": 0,
+    "automation_stale": 13,
+    "squeeze_prophet_status": "OK",
+    "squeeze_prophet_day_direction": "up",
+    "squeeze_prophet_day_pct": "+0.08%",
+    "squeeze_prophet_total_pct": "+0.77%"
+  },
+  "last_audit": {
+    "checkpoint": {
+      "file": "checkpoint-2026-05-22.log",
+      "path": "file:///Users/michaelmote/Desktop/_audit/checkpoint-2026-05-22.log",
+      "red": 9,
+      "yellow": 3,
+      "error": 1,
+      "info": 1,
+      "green": 4
+    },
+    "runtime_state_scan": {
+      "file": "runtime-state-scan-2026-05-24.log",
+      "path": "file:///Users/michaelmote/Desktop/_audit/runtime-state-scan-2026-05-24.log",
+      "missing": 0,
+      "extra": 19,
+      "mismatch": 2,
+      "stale": 13,
+      "healthy": 14
+    },
+    "squeeze_prophet": {
+      "daemon_status": "OK",
+      "discovered": 547,
+      "evaluated": 50,
+      "ready": 9,
+      "data_timestamp": "2026-05-24T06:14:14.171127"
+    }
+  },
+  "open_findings": [],
+  "squeeze_prophet_pending": [
+    {
+      "symbol": "ANVS",
+      "score": 50,
+      "conviction": "B",
+      "action": "review for entry"
+    },
+    {
+      "symbol": "ASMB",
+      "score": 50,
+      "conviction": "B",
+      "action": "review for entry"
+    },
+    {
+      "symbol": "IMRX",
+      "score": 40,
+      "conviction": "B",
+      "action": "watch"
+    },
+    {
+      "symbol": "EXOZ",
+      "score": 40,
+      "conviction": "B",
+      "action": "watch"
+    },
+    {
+      "symbol": "BYSI",
+      "score": 36,
+      "conviction": "B",
+      "action": "monitor only"
+    }
+  ],
+  "next_scheduled_task": {
+    "next_non_self_name": "budget-dashboard-sync",
+    "next_non_self_runs_at": "2026-05-24 20:07 PT (Sun)",
+    "next_non_self_last_run": "2026-05-24 08:08 PT (Sun)",
+    "this_task_name": "dashboard-publish-hourly",
+    "this_task_next": "2026-05-24 13:03 PT (Sun)",
+    "this_task_last_run": "2026-05-24 12:04 PT (Sun)"
+  },
+  "source_files": {
+    "checkpoint": "~/Desktop/_audit/checkpoint-2026-05-22.log",
+    "runtime_state_scan": "~/Desktop/_audit/runtime-state-scan-2026-05-24.log",
+    "v2_dashboard": "~/Desktop/mikes-trading-bot/data/v2_dashboard.json",
+    "health": "~/Desktop/mikes-trading-bot/data/health.json",
+    "findings_dir": "~/Desktop/_audit/findings/ (does not exist - 0 open findings)",
+    "architecture_doc": "~/Desktop/_audit/aios-architecture-decision-2026-05.md"
+  }
+}
