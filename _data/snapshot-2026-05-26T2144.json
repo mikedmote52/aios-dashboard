@@ -1,0 +1,67 @@
+{
+  "generated_utc": "2026-05-26T21:44:24 UTC",
+  "title_date": "Tuesday, 2026-05-26",
+  "status_dot": "yellow",
+  "overall": "drift present, no findings",
+  "checkpoint": {
+    "file": "checkpoint-2026-05-26.log",
+    "totals": "8 red, 3 yellow, 1 info, 1 error, 6 green",
+    "reds": 8
+  },
+  "runtime": {
+    "file": "runtime-state-scan-2026-05-26.log",
+    "missing": 0,
+    "extra": 7,
+    "mismatch": 3,
+    "stale": 9,
+    "healthy": 13
+  },
+  "squeeze_prophet": {
+    "status": "OK",
+    "discovered": 568,
+    "evaluated": 50,
+    "ready": 9,
+    "day_pct": 0.0865,
+    "total_pct": 0.77,
+    "top_picks": [
+      {
+        "symbol": "BDTX",
+        "score": 54,
+        "conviction": "B",
+        "action": "review for entry"
+      },
+      {
+        "symbol": "IMRX",
+        "score": 46,
+        "conviction": "B",
+        "action": "watch"
+      },
+      {
+        "symbol": "NRXP",
+        "score": 46,
+        "conviction": "B",
+        "action": "watch"
+      },
+      {
+        "symbol": "CRDF",
+        "score": 43,
+        "conviction": "B",
+        "action": "watch"
+      },
+      {
+        "symbol": "KLRS",
+        "score": 43,
+        "conviction": "B",
+        "action": "watch"
+      }
+    ]
+  },
+  "open_findings": [],
+  "next_task": {
+    "taskId": "checkpoint",
+    "enabled": true,
+    "nextRunAt": "2026-05-27T01:02:55.000Z",
+    "lastRunAt": "2026-05-26T20:53:39.766Z"
+  },
+  "self_task_next": "2026-05-26T22:03:47.000Z"
+}
