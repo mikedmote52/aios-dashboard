@@ -1,0 +1,54 @@
+{
+  "generated_at_utc": "2026-05-27T22:05:31Z",
+  "generated_at_local": "Wed 15:05 PDT",
+  "status": "yellow",
+  "status_reason": "7 red repos, 1 flag (FLAG, not FAIL), no findings open",
+  "inputs": {
+    "checkpoint_log": "~/Desktop/_audit/checkpoint-2026-05-27.log",
+    "runtime_state_scan_log": "~/Desktop/_audit/runtime-state-scan-2026-05-27.log",
+    "prophet_dashboard": "~/Desktop/mikes-trading-bot/data/v2_dashboard.json",
+    "prophet_health": "~/Desktop/mikes-trading-bot/data/health.json",
+    "findings_dir": "~/Desktop/_audit/findings/"
+  },
+  "today": {
+    "open_findings": 0,
+    "checkpoint_reds": 7,
+    "drift": {"mismatch": 3, "stale": 11, "extra": 26},
+    "prophet_status": "OK",
+    "day_pnl_pct": 0.09,
+    "total_pnl_pct": 0.78
+  },
+  "last_audit": {
+    "checkpoint": {"red": 7, "yellow": 5, "info": 1, "error": 1, "green": 6, "total": 19},
+    "runtime_state": {"missing": 0, "extra": 26, "mismatch": 3, "stale": 11, "healthy": 17},
+    "prophet": {"discovered": 581, "evaluated": 50, "ready": 10}
+  },
+  "open_findings": [],
+  "flags": [
+    {
+      "id": "trading-bot-tool-audit-2026-05-26",
+      "status": "FLAG",
+      "path": "~/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+      "summary": "Deny list intact; 2 new MCP servers (filesystem read-only, workspace) appeared in allow list without dated ledger approval."
+    }
+  ],
+  "prophet_pending_top5": [
+    {"symbol": "MNTS", "score": 70, "tier": "S", "action": "review for entry"},
+    {"symbol": "MDWD", "score": 50, "tier": "B", "action": "watch"},
+    {"symbol": "CING", "score": 43, "tier": "B", "action": "watch"},
+    {"symbol": "EDIT", "score": 40, "tier": "B", "action": "watch"},
+    {"symbol": "BYSI", "score": 40, "tier": "B", "action": "watch"}
+  ],
+  "next_scheduled_task": {
+    "name": "budget-dashboard-sync",
+    "next_run_utc": "2026-05-28T03:07:38Z",
+    "next_run_local": "2026-05-27 20:07 PT (Wed)",
+    "last_run_utc": "2026-05-27T19:08:34Z",
+    "last_run_local": "2026-05-27 12:08 PT (Wed)"
+  },
+  "self_next": {
+    "name": "dashboard-publish-hourly",
+    "next_run_utc": "2026-05-27T23:03:47Z",
+    "next_run_local": "2026-05-27 16:03 PT (Wed)"
+  }
+}
