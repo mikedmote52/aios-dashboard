@@ -1,0 +1,102 @@
+{
+  "generated_utc": "2026-05-27T00:09:16Z",
+  "generated_local": "2026-05-26 17:09 PDT (Tue)",
+  "sources": {
+    "checkpoint": "~/Desktop/_audit/checkpoint-2026-05-26.log",
+    "runtime_state_scan": "~/Desktop/_audit/runtime-state-scan-2026-05-26.log",
+    "squeeze_prophet_dashboard": "~/Desktop/mikes-trading-bot/data/v2_dashboard.json",
+    "squeeze_prophet_health": "~/Desktop/mikes-trading-bot/data/health.json",
+    "findings_dir": "~/Desktop/_audit/findings/",
+    "scheduled_tasks": "mcp__scheduled-tasks__list_scheduled_tasks"
+  },
+  "today": {
+    "overall": "yellow",
+    "overall_reason": "drift present, no findings open",
+    "open_findings": 0,
+    "checkpoint_reds": 8,
+    "automation_drift": {
+      "missing": 0,
+      "extra": 7,
+      "mismatch": 3,
+      "stale": 9,
+      "healthy": 13
+    }
+  },
+  "audit": {
+    "checkpoint": {
+      "red": 8,
+      "yellow": 3,
+      "info": 1,
+      "error": 1,
+      "green": 6,
+      "total_tracked": 13
+    },
+    "runtime": {
+      "missing": 0,
+      "extra": 7,
+      "mismatch": 3,
+      "stale": 9,
+      "healthy": 13,
+      "notification": "SENT"
+    },
+    "squeeze_prophet": {
+      "daemon": "OK",
+      "discovered": 569,
+      "evaluated": 50,
+      "ready": 10
+    }
+  },
+  "open_findings": [],
+  "flagged_findings": [
+    {
+      "file": "~/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+      "status": "FLAG",
+      "summary": "2 new MCP servers (filesystem, workspace) in allow-list without ledger approval; deny set intact"
+    }
+  ],
+  "squeeze_prophet_pending": [
+    {
+      "symbol": "BDTX",
+      "conviction": "B",
+      "score": 54,
+      "action": "review for entry"
+    },
+    {
+      "symbol": "IMRX",
+      "conviction": "B",
+      "score": 46,
+      "action": "watch"
+    },
+    {
+      "symbol": "NRXP",
+      "conviction": "B",
+      "score": 46,
+      "action": "watch"
+    },
+    {
+      "symbol": "CRDF",
+      "conviction": "B",
+      "score": 43,
+      "action": "watch"
+    },
+    {
+      "symbol": "KLRS",
+      "conviction": "B",
+      "score": 43,
+      "action": "watch"
+    }
+  ],
+  "squeeze_prophet_account": {
+    "status": "OK",
+    "day_pnl_pct": 0.08,
+    "total_pnl_pct": 0.77,
+    "day_pnl_direction": "up",
+    "total_pnl_direction": "up"
+  },
+  "next_scheduled_task": {
+    "next_non_self": "checkpoint",
+    "next_non_self_runs_at_local": "2026-05-26 18:02 PT (Tue)",
+    "next_non_self_last_run_local": "2026-05-26 13:53 PT (Tue)",
+    "self_next_local": "2026-05-26 18:03 PT (Tue)"
+  }
+}
