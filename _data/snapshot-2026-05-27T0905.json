@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-05-27T16:05:52Z",
+  "generated_at_local": "2026-05-27 09:05 PDT",
+  "status": "yellow",
+  "status_reason": "drift present, no findings open",
+  "today": {
+    "open_findings": 0,
+    "flags": 1,
+    "checkpoint_reds": 7,
+    "drift": {"mismatch": 3, "stale": 11, "extra": 26},
+    "prophet_daemon": "OK",
+    "day_pnl_pct": 0.09,
+    "total_pnl_pct": 0.78
+  },
+  "last_audit": {
+    "checkpoint_log": "checkpoint-2026-05-27.log",
+    "checkpoint_summary": {"red": 7, "yellow": 5, "info": 1, "error": 1, "green": 6, "total": 19},
+    "runtime_log": "runtime-state-scan-2026-05-27.log",
+    "runtime_summary": {"missing": 0, "extra": 26, "mismatch": 3, "stale": 11, "healthy": 17},
+    "squeeze_prophet": {"discovered": 590, "evaluated": 50, "ready": 10}
+  },
+  "open_findings": [],
+  "flags": [
+    {
+      "file": "trading-bot-tool-audit-2026-05-26.md",
+      "status": "FLAG",
+      "url": "file:///Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md"
+    }
+  ],
+  "squeeze_prophet_pending": [
+    {"symbol": "MNTS", "score": 70, "conviction": "S", "action": "review for entry"},
+    {"symbol": "EDIT", "score": 46, "conviction": "B", "action": "watch"},
+    {"symbol": "IMRX", "score": 46, "conviction": "B", "action": "watch"},
+    {"symbol": "MDWD", "score": 43, "conviction": "B", "action": "watch"},
+    {"symbol": "RXRX", "score": 38, "conviction": "B", "action": "watch"}
+  ],
+  "next_scheduled_task": {
+    "name": "budget-dashboard-sync",
+    "next_run_utc": "2026-05-27T19:07:38Z",
+    "next_run_local": "2026-05-27 12:07 PT (Wed)",
+    "last_run_utc": "2026-05-27T15:08:33.848Z",
+    "last_run_local": "2026-05-27 08:08 PT (Wed)"
+  },
+  "dashboard_self_next": {
+    "task_id": "dashboard-publish-hourly",
+    "next_run_utc": "2026-05-27T17:03:47Z",
+    "next_run_local": "2026-05-27 10:03 PT (Wed)"
+  }
+}

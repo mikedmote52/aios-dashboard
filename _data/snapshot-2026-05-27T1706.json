@@ -1,0 +1,63 @@
+{
+  "generated_at_utc": "2026-05-27T17:06:23Z",
+  "generated_at_local": "2026-05-27 10:06 PDT",
+  "status": "yellow",
+  "status_reason": "drift present, 1 flag, no findings open",
+  "inputs": {
+    "checkpoint_log": "~/Desktop/_audit/checkpoint-2026-05-27.log",
+    "runtime_state_log": "~/Desktop/_audit/runtime-state-scan-2026-05-27.log",
+    "v2_dashboard_json": "~/Desktop/mikes-trading-bot/data/v2_dashboard.json",
+    "health_json": "~/Desktop/mikes-trading-bot/data/health.json",
+    "findings_dir": "~/Desktop/_audit/findings/"
+  },
+  "today": {
+    "open_findings_count": 0,
+    "flagged_findings_count": 1,
+    "flagged_findings_severity": ["FLAG"],
+    "checkpoint_reds": 7,
+    "checkpoint_yellows": 5,
+    "checkpoint_info": 1,
+    "checkpoint_error": 1,
+    "checkpoint_greens": 6,
+    "runtime_missing": 0,
+    "runtime_extra": 26,
+    "runtime_mismatch": 3,
+    "runtime_stale": 11,
+    "runtime_healthy": 17,
+    "prophet_status": "OK",
+    "prophet_total_pnl_pct": 0.78,
+    "prophet_day_pnl_pct": 0.09,
+    "prophet_num_positions": 6
+  },
+  "last_audit": {
+    "checkpoint_summary": "7 red, 5 yellow, 1 info, 1 error, 6 green (19 repos)",
+    "runtime_state_summary": "0 missing, 26 extra, 3 mismatch, 11 stale, 17 healthy",
+    "squeeze_prophet_summary": "590 candidates discovered, 50 evaluated, 10 ready to trade"
+  },
+  "open_findings": [
+    {
+      "path": "/Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+      "severity": "FLAG",
+      "summary": "2 new MCP servers (filesystem, workspace) in allow list without dated audit-ledger approval. Deny list intact; risk low."
+    }
+  ],
+  "squeeze_prophet_pending": [
+    {"symbol": "MNTS", "score": 70, "conviction": "S", "action": "review for entry"},
+    {"symbol": "EDIT", "score": 46, "conviction": "B", "action": "watch"},
+    {"symbol": "IMRX", "score": 46, "conviction": "B", "action": "watch"},
+    {"symbol": "MDWD", "score": 43, "conviction": "B", "action": "watch"},
+    {"symbol": "RXRX", "score": 38, "conviction": "B", "action": "watch"}
+  ],
+  "next_scheduled_task": {
+    "name": "budget-dashboard-sync",
+    "next_run_utc": "2026-05-27T19:07:38Z",
+    "next_run_local": "2026-05-27 12:07 PT (Wed)",
+    "last_run_utc": "2026-05-27T15:08:33.848Z",
+    "last_run_local": "2026-05-27 08:08 PT (Wed)"
+  },
+  "next_self_run": {
+    "name": "dashboard-publish-hourly",
+    "next_run_utc": "2026-05-27T18:03:47Z",
+    "next_run_local": "2026-05-27 11:03 PT (Wed)"
+  }
+}
