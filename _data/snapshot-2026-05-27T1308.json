@@ -1,81 +1,74 @@
 {
-  "generated_utc": "2026-05-27T13:08:04Z",
-  "local_date_pt": "2026-05-27",
-  "local_time_pt": "Wednesday 06:08 PDT",
-  "today": {
-    "status": "yellow",
-    "status_reason": "drift present, no findings open",
-    "open_findings": 0,
-    "checkpoint_reds": 7,
-    "automation_drift": {
-      "missing": 0,
-      "mismatch": 3,
-      "stale": 9,
-      "extra": 7
-    },
-    "squeeze_prophet": {
-      "status": "OK",
-      "day_pnl_pct": 0.09,
-      "total_pnl_pct": 0.77
-    }
+  "generated_utc": "2026-05-27T20:08:18Z",
+  "generated_pt": "Wednesday 13:08 PDT",
+  "status": "yellow",
+  "status_reason": "7 red repos, 1 flag, no findings open",
+  "open_findings_count": 0,
+  "flag_findings_count": 1,
+  "checkpoint": {
+    "summary": "7 red, 5 yellow, 1 info, 1 error, 6 green. 19 repos checked",
+    "red": 7
   },
-  "last_audit": {
-    "checkpoint_log": "checkpoint-2026-05-27.log",
-    "checkpoint_summary": "7 red, 5 yellow, 1 info, 1 error, 6 green",
-    "state_scan_log": "runtime-state-scan-2026-05-26.log",
-    "state_scan_summary": "0 missing, 7 extra, 3 mismatch, 9 stale, 13 healthy",
-    "squeeze_prophet_summary": "daemon OK, 569 discovered, 50 evaluated, 10 ready"
+  "runtime_state": {
+    "missing": 0,
+    "extra": 26,
+    "mismatch": 3,
+    "stale": 11,
+    "healthy": 17,
+    "line": "0 missing, 26 extra, 3 mismatch, 11 stale, 17 healthy"
+  },
+  "squeeze_prophet": {
+    "status": "OK",
+    "discovered": 590,
+    "evaluated": 50,
+    "ready": 10,
+    "total_pnl_pct": 0.78,
+    "day_pnl_pct": 0.09,
+    "top_picks": [
+      {
+        "symbol": "MNTS",
+        "score": 70,
+        "conviction": "S",
+        "thesis_short": "Very low float (9.2M) | Elevated short interest (18.6% of float) | Explosive volume acceleration (24.3x vs 10d avg) | SQUEEZE TRIFECTA: 9.2M float + 18.6% SI + 24.3x volume"
+      },
+      {
+        "symbol": "EDIT",
+        "score": 46,
+        "conviction": "B",
+        "thesis_short": "Biotech \u2014 catalyst-driven sector | Elevated short interest (10.2% of float) | Explosive volume acceleration (6.0x vs 10d avg) | Today +19.2%"
+      },
+      {
+        "symbol": "IMRX",
+        "score": 46,
+        "conviction": "B",
+        "thesis_short": "Biotech \u2014 catalyst-driven sector | Moderate float (49.4M) | Elevated short interest (19.4% of float) | Explosive volume acceleration (5.8x vs 10d avg)"
+      },
+      {
+        "symbol": "MDWD",
+        "score": 43,
+        "conviction": "B",
+        "thesis_short": "Biotech \u2014 catalyst-driven sector | Very low float (8.9M) | Elevated short interest (13.7% of float)"
+      },
+      {
+        "symbol": "RXRX",
+        "score": 38,
+        "conviction": "B",
+        "thesis_short": "Biotech \u2014 catalyst-driven sector | Very high short interest (34.2% of float) | Social emerging (2 mentions) | Near 52-week low \u2014 turnaround potential"
+      }
+    ]
   },
   "open_findings": [],
-  "flags_not_counted": [
+  "flag_findings": [
     {
-      "name": "trading-bot-tool-audit-2026-05-26",
-      "status": "FLAG",
-      "path": "/Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md"
+      "file": "trading-bot-tool-audit-2026-05-26",
+      "url": "file:///Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+      "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.clau\u2026"
     }
   ],
-  "squeeze_prophet_pending": [
-    {
-      "symbol": "MNTS",
-      "score": 83,
-      "conviction": "S",
-      "action": "review for entry"
-    },
-    {
-      "symbol": "BDTX",
-      "score": 54,
-      "conviction": "B",
-      "action": "review for entry"
-    },
-    {
-      "symbol": "IMRX",
-      "score": 46,
-      "conviction": "B",
-      "action": "watch"
-    },
-    {
-      "symbol": "NRXP",
-      "score": 46,
-      "conviction": "B",
-      "action": "watch"
-    },
-    {
-      "symbol": "CRDF",
-      "score": 43,
-      "conviction": "B",
-      "action": "watch"
-    }
-  ],
-  "next_scheduled_task": {
-    "non_self_next": "trading-bot-tool-audit-daily",
-    "non_self_next_run_pt": "2026-05-27 06:24 PT (Wed)",
-    "non_self_last_run_pt": "2026-05-26 14:45 PT (Tue)",
-    "self_next_run_pt": "2026-05-27 07:03 PT (Wed)"
+  "next_task": {
+    "name": "llm-portfolio-track",
+    "next_run": "2026-05-27 14:11 PT (Wed)",
+    "last_run": "2026-05-26 14:25 PT (Tue)"
   },
-  "sources": {
-    "v2_dashboard_timestamp": "2026-05-26T16:59:54.459930",
-    "health_timestamp": "2026-05-27T02:36:17.507317+00:00",
-    "checkpoint_path": "/Users/michaelmote/Desktop/_audit/checkpoint-2026-05-27.log",
-    "state_scan_path": "/Users/michaelmote/Desktop/_audit/runtime-state-scan-2026-05-26.log"
-  }
+  "self_next_run": "2026-05-27 14:03 PT (Wed)"
 }
