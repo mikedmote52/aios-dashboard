@@ -1,0 +1,56 @@
+{
+  "generated_utc": "2026-05-27T15:06:00Z",
+  "local_date_pt": "2026-05-27",
+  "local_time_pt": "Wednesday 08:06 PDT",
+  "today": {
+    "status": "yellow",
+    "status_reason": "drift present, no findings open",
+    "open_findings": 0,
+    "checkpoint_reds": 7,
+    "automation_drift": {
+      "missing": 0,
+      "mismatch": 3,
+      "stale": 11,
+      "extra": 26
+    },
+    "squeeze_prophet": {
+      "status": "OK",
+      "day_pnl_pct": 0.08,
+      "total_pnl_pct": 0.77
+    }
+  },
+  "last_audit": {
+    "checkpoint_log": "checkpoint-2026-05-27.log",
+    "checkpoint_summary": "7 red, 5 yellow, 1 info, 1 error, 6 green",
+    "state_scan_log": "runtime-state-scan-2026-05-27.log",
+    "state_scan_summary": "0 missing, 26 extra, 3 mismatch, 11 stale, 17 healthy",
+    "squeeze_prophet_summary": "daemon OK, 579 discovered, 50 evaluated, 10 ready"
+  },
+  "open_findings": [],
+  "flags_not_counted": [
+    {
+      "name": "trading-bot-tool-audit-2026-05-26",
+      "status": "FLAG",
+      "path": "/Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md"
+    }
+  ],
+  "squeeze_prophet_pending": [
+    {"symbol": "MNTS", "score": 83, "conviction": "S", "action": "review for entry"},
+    {"symbol": "BDTX", "score": 48, "conviction": "B", "action": "review for entry"},
+    {"symbol": "IMRX", "score": 46, "conviction": "B", "action": "watch"},
+    {"symbol": "NRXP", "score": 46, "conviction": "B", "action": "watch"},
+    {"symbol": "KLRS", "score": 43, "conviction": "B", "action": "watch"}
+  ],
+  "next_scheduled_task": {
+    "non_self_next": "budget-dashboard-sync",
+    "non_self_next_run_pt": "2026-05-27 12:07 PT (Wed)",
+    "non_self_last_run_pt": "2026-05-26 20:08 PT (Tue)",
+    "self_next_run_pt": "2026-05-27 09:03 PT (Wed)"
+  },
+  "sources": {
+    "v2_dashboard_timestamp": "2026-05-27T06:32:29.470027",
+    "health_timestamp": "2026-05-27T13:35:48.267022+00:00",
+    "checkpoint_path": "/Users/michaelmote/Desktop/_audit/checkpoint-2026-05-27.log",
+    "state_scan_path": "/Users/michaelmote/Desktop/_audit/runtime-state-scan-2026-05-27.log"
+  }
+}
