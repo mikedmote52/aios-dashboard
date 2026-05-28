@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-05-28T00:08:51Z",
+  "status": "yellow",
+  "status_reason": "7 red repos, 1 flag, no findings open",
+  "checkpoint": {
+    "log": "checkpoint-2026-05-27.log",
+    "summary": "7 red, 5 yellow, 1 info, 1 error, 6 green. 19 repos checked",
+    "reds": 7
+  },
+  "runtime_state": {
+    "log": "runtime-state-scan-2026-05-27.log",
+    "missing": 0,
+    "extra": 26,
+    "mismatch": 3,
+    "stale": 11,
+    "healthy": 17
+  },
+  "squeeze_prophet": {
+    "discovered": 581,
+    "evaluated": 50,
+    "ready": 10,
+    "top_picks": [
+      {
+        "symbol": "MNTS",
+        "score": 70,
+        "conviction": "S"
+      },
+      {
+        "symbol": "MDWD",
+        "score": 50,
+        "conviction": "B"
+      },
+      {
+        "symbol": "CING",
+        "score": 43,
+        "conviction": "B"
+      },
+      {
+        "symbol": "EDIT",
+        "score": 40,
+        "conviction": "B"
+      },
+      {
+        "symbol": "BYSI",
+        "score": 40,
+        "conviction": "B"
+      }
+    ],
+    "daemon_status": "OK",
+    "day_pnl_pct": 0.0798,
+    "total_pnl_pct": 0.77
+  },
+  "open_findings": [],
+  "flag_findings": [
+    {
+      "name": "trading-bot-tool-audit-2026-05-26",
+      "path": "/sessions/vigilant-zen-gauss/mnt/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+      "status": "FLAG (not FAIL)",
+      "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.claude/settings.local.json`. No drift on the prevention side. Two MCP servers appear in the allow list t"
+    }
+  ],
+  "next_scheduled_task": {
+    "name": "checkpoint",
+    "next_run_utc": "2026-05-28T01:02:55Z",
+    "last_run_utc": "2026-05-27T01:03:34Z"
+  },
+  "self_next_run_utc": "2026-05-28T01:03:47Z"
+}
