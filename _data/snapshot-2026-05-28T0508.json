@@ -1,0 +1,67 @@
+{
+  "ts_utc": "2026-05-28T05:08:11Z",
+  "ts_local": "Wednesday 22:08 PDT",
+  "status": "yellow",
+  "reason": "8 red repos, 1 flag",
+  "open_findings": [],
+  "flag_findings": [
+    "trading-bot-tool-audit-2026-05-26.md"
+  ],
+  "checkpoint": {
+    "red": 8,
+    "yellow": 5,
+    "info": 2,
+    "green": 5,
+    "error": 0,
+    "repos": 20
+  },
+  "runtime": {
+    "missing": 0,
+    "extra": 26,
+    "mismatch": 3,
+    "stale": 11,
+    "healthy": 17
+  },
+  "squeeze_prophet": {
+    "status": "OK",
+    "discovered": 581,
+    "evaluated": 50,
+    "ready": 10,
+    "top_picks": [
+      {
+        "symbol": "MNTS",
+        "score": 70,
+        "conviction": "S"
+      },
+      {
+        "symbol": "MDWD",
+        "score": 50,
+        "conviction": "B"
+      },
+      {
+        "symbol": "CING",
+        "score": 43,
+        "conviction": "B"
+      },
+      {
+        "symbol": "EDIT",
+        "score": 40,
+        "conviction": "B"
+      },
+      {
+        "symbol": "BYSI",
+        "score": 40,
+        "conviction": "B"
+      }
+    ]
+  },
+  "pnl": {
+    "day_pct": 0.0798,
+    "total_pct": 0.77
+  },
+  "next_task": {
+    "name": "trading-bot-tool-audit-daily",
+    "next": "2026-05-28 06:24 PT (Thu)",
+    "last": "2026-05-27 06:25 PT (Wed)"
+  }
+}
