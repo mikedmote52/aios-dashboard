@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-05-28T23:05:37Z",
+  "generated_local": "2026-05-28T16:05 PDT",
+  "status": "yellow",
+  "status_reason": "8 red repos, 1 flag",
+  "open_findings": 0,
+  "today": {
+    "checkpoint_reds": 8,
+    "drift": {"mismatch": 2, "stale": 5, "extra": 7, "missing": 1},
+    "prophet_daemon": "OK",
+    "day_pnl_pct": 0.1,
+    "total_pnl_pct": 0.8
+  },
+  "last_audit": {
+    "checkpoint": {"date": "2026-05-27", "red": 8, "yellow": 5, "info": 2, "error": 0, "green": 5, "repos": 20},
+    "runtime_state": {"date": "2026-05-28", "missing": 1, "extra": 7, "mismatch": 2, "stale": 5, "healthy": 23},
+    "squeeze_prophet": {"discovered": 558, "evaluated": 50, "ready": 10}
+  },
+  "findings": [
+    {
+      "name": "trading-bot-tool-audit-2026-05-26",
+      "status": "flag",
+      "verdict": "FLAG (not FAIL)",
+      "path": "file:///Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+      "summary": "Deny list intact; 2 new MCP servers (filesystem read-only, workspace) in allow list without ledger approval. Low risk."
+    }
+  ],
+  "squeeze_prophet_pending": [
+    {"symbol": "MDWD", "score": 53, "conviction": "B", "short_pct": 0.1347, "action": "review for entry"},
+    {"symbol": "IMRX", "score": 46, "conviction": "B", "short_pct": 0.2015, "action": "watch"}
+  ],
+  "top_trade_candidate": {"symbol": "CYCN", "score": 80, "direction": "long"},
+  "next_scheduled_task": {
+    "name": "budget-dashboard-sync",
+    "next_run_pt": "2026-05-28 20:07 PT",
+    "last_run_pt": "2026-05-28 12:07 PT",
+    "dashboard_self_next_pt": "2026-05-28 17:03 PT"
+  },
+  "sources": {
+    "checkpoint": "~/Desktop/_audit/checkpoint-2026-05-27.log",
+    "runtime_state_scan": "~/Desktop/_audit/runtime-state-scan-2026-05-28.log",
+    "v2_dashboard": "~/Desktop/mikes-trading-bot/data/v2_dashboard.json",
+    "health": "~/Desktop/mikes-trading-bot/data/health.json",
+    "findings_dir": "~/Desktop/_audit/findings/"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "generated_utc": "2026-05-28T23:38:58Z",
+  "generated_local": "Thu 16:38 PDT",
+  "date": "2026-05-28",
+  "status": "red",
+  "status_reason": "2 marketing P0; 1 flag",
+  "trading": {
+    "status": "OK",
+    "timestamp": "2026-05-28T20:59:51.212616+00:00",
+    "total_pnl_pct": 0.8,
+    "num_positions": 7
+  },
+  "marketing": {
+    "heartbeat_path": "/sessions/nice-epic-einstein/mnt/Desktop/mote-ops/marketing/heartbeat-2026-05-28.jsonl",
+    "agents_seen": [
+      "vp-tracking"
+    ],
+    "agent_count": 1,
+    "last_heartbeat_ts": "2026-05-28T07:00:00-07:00",
+    "inbox_p0": 2,
+    "inbox_p1": 1,
+    "inbox_items": [
+      {
+        "priority": "P0",
+        "title": "Marketing hierarchy is dead",
+        "detail": "notification-router/state.json records marketing-director, vp-tracking, vp-content, and vp-briefing as 'dead' (watchdog last_seen=None) continuously since ~2026-05-07. As of today (2026-05-28) that is ~20 days with no heartbeats. The schedulers/runners or the heartbeat write path need to be restored."
+      },
+      {
+        "priority": "P0",
+        "title": "Runaway router / queue flood",
+        "detail": "moteops_marketing.watchdog_dead is re-dispatched ~every 10s with no cooldown for info_only flags. queue/expired holds ~48,174 files. Cooldown/dedup logic for info_only must be fixed before any agent's signal is trustworthy."
+      },
+      {
+        "priority": "P1",
+        "title": "North Star metric source not connected",
+        "detail": "Cannot count qualified discovery calls/week \u2014 no Calendly (calendly.com/mikedmote) access. Connect a Calendly source so VP-Tracking can report the North Star. Until then calls_this_week is recorded as null (not fabricated)."
+      }
+    ]
+  },
+  "findings": {
+    "items": [
+      {
+        "name": "trading-bot-tool-audit-2026-05-26",
+        "path": "file:///sessions/nice-epic-einstein/mnt/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+        "status": "flag",
+        "verdict": "",
+        "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.clau"
+      }
+    ],
+    "open": 0,
+    "flag": 1
+  },
+  "news": {
+    "headline": "OpenRouter shipped a new Agent SDK tool type (5/28): auto-resolves routine decisions, pauses for human input on high-stakes ones \u2014 two hooks, zero loop-management code. Wire it into OpenClaw + Squeeze Prophet as the execution gate: agent auto-runs scans + trailing-stop tweaks but pauses for sign-off before opening a new position. Same pattern fits the Trading options bot's premarket\u2192execute handoff.",
+    "ts": "2026-05-28T17:07:00.333962+00:00"
+  },
+  "action_list": {
+    "total": 19,
+    "urgent": 4,
+    "urgent_items": [
+      "Rotate the Anthropic API key at console.anthropic.com \u2014 especially the one copied into 7 files (sk-ant-api03-R0ZCusv...). Full list at `~/Desktop/_audit/CRITICAL-ROTATE.md`.",
+      "Rotate the Moltbook API key at their portal.",
+      "Top up Anthropic credit so morning-trading-brief stops failing daily.",
+      "Plug in a USB drive at home and turn on Time Machine. You currently have zero backups configured."
+    ]
+  },
+  "checkpoint": {
+    "checkpoint_path": "/sessions/nice-epic-einstein/mnt/Desktop/_audit/checkpoint-2026-05-27.log",
+    "checkpoint_summary": "20 repos",
+    "runtime_path": "/sessions/nice-epic-einstein/mnt/Desktop/_audit/runtime-state-scan-2026-05-28.log",
+    "runtime_summary": "1 missing, 7 extra, 2 mismatch, 5 stale"
+  },
+  "scheduled_tasks": {
+    "available": false,
+    "tasks": []
+  },
+  "calls_this_week": null,
+  "data_gaps": [
+    "pipeline state (~/mote-ops/pipeline/data/command_state.json) for next call, active prospects, intake verdict",
+    "intel feed (~/mote-ops/ops/.claude/skills/intel/dashboard-feed.json) for weekly observation",
+    "client staged SOWs (~/mote-ops/clients/*/staged_replies/) for approvals queue",
+    "Hermes audit findings (intel-feed repo) for audit-ready items",
+    "Calendly source for calls-this-week metric (vp-tracking reports null)"
+  ]
+}
