@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-05-28T02:05:46Z",
+  "local_time": "2026-05-27 19:05 PDT",
+  "status": "yellow",
+  "status_reason": "7 red repos in checkpoint sweep, 1 FLAG, 0 open findings",
+  "findings_open": 0,
+  "findings_flag": 1,
+  "checkpoint": {
+    "date": "2026-05-27",
+    "red": 7,
+    "yellow": 5,
+    "info": 1,
+    "error": 1,
+    "green": 6,
+    "repos_scanned": 19
+  },
+  "runtime_state": {
+    "date": "2026-05-27",
+    "missing": 0,
+    "extra": 26,
+    "mismatch": 3,
+    "stale": 11,
+    "healthy": 17
+  },
+  "squeeze_prophet": {
+    "snapshot_at": "2026-05-27T16:59:54Z",
+    "discovered": 581,
+    "evaluated": 50,
+    "ready": 10,
+    "daemon": "OK",
+    "day_pnl_pct": 0.08,
+    "total_pnl_pct": 0.77,
+    "top_picks": [
+      {"symbol": "MNTS", "score": 70, "tier": "S"},
+      {"symbol": "MDWD", "score": 50, "tier": "B"},
+      {"symbol": "CING", "score": 43, "tier": "B"},
+      {"symbol": "EDIT", "score": 40, "tier": "B"},
+      {"symbol": "BYSI", "score": 40, "tier": "B"}
+    ]
+  },
+  "flags": [
+    {
+      "id": "trading-bot-tool-audit-2026-05-26",
+      "status": "FLAG",
+      "file": "/Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md"
+    }
+  ],
+  "next_scheduled_task": {
+    "name": "budget-dashboard-sync",
+    "next_run_local": "2026-05-27 20:07 PT (Wed)",
+    "next_run_utc": "2026-05-28T03:07:38Z",
+    "last_run_local": "2026-05-27 12:08 PT (Wed)"
+  },
+  "self_next_run_local": "2026-05-27 20:03 PT (Wed)"
+}
