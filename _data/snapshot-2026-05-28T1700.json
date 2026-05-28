@@ -1,0 +1,68 @@
+{
+  "generated_utc": "2026-05-28T17:00:06Z",
+  "status": "yellow",
+  "reason": "8 red repos, 1 flag",
+  "open_findings": 0,
+  "flags": [
+    "trading-bot-tool-audit-2026-05-26"
+  ],
+  "checkpoint": {
+    "red": 8,
+    "yellow": 5,
+    "info": 2,
+    "green": 5,
+    "error": 0,
+    "repos": 20
+  },
+  "runtime_state": {
+    "missing": 0,
+    "extra": 26,
+    "mismatch": 3,
+    "stale": 11,
+    "healthy": 17
+  },
+  "squeeze_prophet": {
+    "status": "OK",
+    "discovered": 563,
+    "evaluated": 50,
+    "ready": 10,
+    "day_pnl_pct": 0.07,
+    "total_pnl_pct": 0.77,
+    "pending": [
+      {
+        "symbol": "ARCT",
+        "score": 50,
+        "conviction": "B",
+        "short_pct": 28.8
+      },
+      {
+        "symbol": "ANVS",
+        "score": 43,
+        "conviction": "B",
+        "short_pct": 15.2
+      },
+      {
+        "symbol": "ABEO",
+        "score": 36,
+        "conviction": "B",
+        "short_pct": 27.3
+      },
+      {
+        "symbol": "AVXL",
+        "score": 36,
+        "conviction": "B",
+        "short_pct": 21.6
+      }
+    ]
+  },
+  "next_task": {
+    "name": "budget-dashboard-sync",
+    "next_run": "2026-05-28T19:07:38Z",
+    "last_run": "2026-05-28T16:57:17Z"
+  },
+  "self_task": {
+    "name": "dashboard-publish-hourly",
+    "next_run": "2026-05-28T18:03:47Z",
+    "last_run": "2026-05-28T16:58:17Z"
+  }
+}
