@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-05-28T13:06:30Z",
+  "local_label": "Thursday 06:06 PDT",
+  "status": "yellow",
+  "status_reason": "8 red repos, 1 flag",
+  "today": {
+    "open_findings": 0,
+    "checkpoint_reds": 8,
+    "checkpoint_yellows": 5,
+    "checkpoint_info": 2,
+    "checkpoint_green": 5,
+    "drift_mismatch": 3,
+    "drift_stale": 11,
+    "drift_extra": 26,
+    "prophet_status": "OK",
+    "day_pnl_pct": 0.08,
+    "total_pnl_pct": 0.77,
+    "day_pnl_dir": "up",
+    "total_pnl_dir": "up"
+  },
+  "last_audit": {
+    "checkpoint_log": "checkpoint-2026-05-27.log",
+    "checkpoint_summary": "8 red, 5 yellow, 2 info, 0 error, 5 green. 20 repos checked",
+    "runtime_log": "runtime-state-scan-2026-05-27.log",
+    "runtime_summary": "0 missing, 26 extra, 3 mismatch, 11 stale, 17 healthy",
+    "prophet_summary": "581 disc / 50 eval / 10 ready"
+  },
+  "open_findings": [],
+  "flags": [
+    {
+      "id": "trading-bot-tool-audit-2026-05-26",
+      "status": "flag",
+      "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.claude/settings.local.json`. No drift on the prevention side.",
+      "path": "file:///Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md"
+    }
+  ],
+  "prophet_pending": [
+    {"symbol": "MNTS", "score": 70, "tier": "S", "action": "review for entry"},
+    {"symbol": "MDWD", "score": 50, "tier": "B", "action": "watch"},
+    {"symbol": "CING", "score": 43, "tier": "B", "action": "watch"},
+    {"symbol": "EDIT", "score": 40, "tier": "B", "action": "watch"},
+    {"symbol": "BYSI", "score": 40, "tier": "B", "action": "watch"}
+  ],
+  "next_task": {
+    "name": "trading-bot-tool-audit-daily",
+    "next_run_pt": "2026-05-28 06:24 PT (Thu)",
+    "last_run_pt": "2026-05-27 06:25 PT (Wed)"
+  },
+  "self_task": {
+    "name": "dashboard-publish-hourly",
+    "last_run_pt": "2026-05-28 06:06 PT (Thu)",
+    "next_run_pt": "2026-05-28 07:03 PT (Thu)"
+  }
+}
