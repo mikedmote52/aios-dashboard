@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-05-28T21:06:03Z",
+  "generated_at_local": "2026-05-28T14:06 PDT",
+  "status": "yellow",
+  "status_reason": "8 red repos, 1 flag",
+  "open_findings_count": 0,
+  "today": {
+    "checkpoint_reds": 8,
+    "drift": {"mismatch": 2, "stale": 5, "extra": 7},
+    "prophet_daemon": "OK",
+    "day_pnl_pct": 0.10,
+    "total_pnl_pct": 0.80
+  },
+  "last_audit": {
+    "checkpoint": {"source": "checkpoint-2026-05-27.log", "red": 8, "yellow": 5, "info": 2, "error": 0, "green": 5, "repos_checked": 20},
+    "runtime_state": {"source": "runtime-state-scan-2026-05-28.log", "missing": 1, "extra": 7, "mismatch": 2, "stale": 5, "healthy": 23},
+    "squeeze_prophet": {"source": "v2_dashboard.json", "discovered": 558, "evaluated": 50, "ready_to_trade": 10}
+  },
+  "findings": [
+    {
+      "file": "trading-bot-tool-audit-2026-05-26.md",
+      "status": "flag",
+      "open": false,
+      "summary": "Deny list intact; 2 new MCP servers (filesystem read-only, workspace) in allow list without a ledger approval entry. Low risk."
+    }
+  ],
+  "squeeze_prophet_pending": [
+    {"symbol": "MDWD", "score": 53, "conviction": "B", "short_pct": 0.1347, "action": "review for entry"},
+    {"symbol": "IMRX", "score": 46, "conviction": "B", "short_pct": 0.2015, "action": "watch"}
+  ],
+  "top_trade_candidate": {"symbol": "CYCN", "score": 80, "direction": "long"},
+  "next_scheduled_task": {
+    "name": "audit-learning-report",
+    "next_run_pt": "2026-05-28 14:38 PT (Thu)",
+    "last_run_pt": "2026-05-27 14:39 PT (Wed)"
+  },
+  "notes": [
+    "Status set to yellow per established dashboard convention (red repos + flag), even though zero findings are formally open.",
+    "No absolute dollar values rendered per skill pitfall guidance; percentages and direction only.",
+    "Next scheduled task is the soonest upcoming enabled task excluding dashboard-publish-hourly itself."
+  ]
+}
