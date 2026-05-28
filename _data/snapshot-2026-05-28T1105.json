@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-05-28T18:05:57Z",
+  "generated_at_local": "2026-05-28 11:05 PDT",
+  "status": "yellow",
+  "status_reason": "8 red repos, 1 flag finding (no open findings, no FAIL)",
+  "today": {
+    "open_findings": 0,
+    "flags": 1,
+    "checkpoint_reds": 8,
+    "drift": {"mismatch": 2, "stale": 5, "extra": 7, "missing": 1},
+    "prophet_daemon": "OK",
+    "day_pnl_pct": 0.07,
+    "day_pnl_direction": "up",
+    "total_pnl_pct": 0.77,
+    "total_pnl_direction": "up"
+  },
+  "last_audit": {
+    "checkpoint": {"source": "checkpoint-2026-05-27.log", "red": 8, "yellow": 5, "info": 2, "error": 0, "green": 5, "repos": 20},
+    "runtime_state": {"source": "runtime-state-scan-2026-05-28.log", "missing": 1, "extra": 7, "mismatch": 2, "stale": 5, "healthy": 23},
+    "squeeze_prophet": {"source": "v2_dashboard.json", "discovered": 563, "evaluated": 50, "ready_to_trade": 10}
+  },
+  "open_findings": [],
+  "flags": [
+    {
+      "name": "trading-bot-tool-audit-2026-05-26",
+      "status": "FLAG",
+      "file": "file:///Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+      "summary": "Deny list intact; 2 new MCP servers (filesystem read-only, workspace) in allow list without ledger approval. Low risk."
+    }
+  ],
+  "squeeze_prophet_pending": [
+    {"symbol": "ARCT", "score": 50, "conviction": "B", "short_pct": 0.2877, "action": "review for entry"},
+    {"symbol": "ANVS", "score": 43, "conviction": "B", "short_pct": 0.1515, "action": "watch"},
+    {"symbol": "ABEO", "score": 36, "conviction": "B", "short_pct": 0.2725, "action": "watch"},
+    {"symbol": "AVXL", "score": 36, "conviction": "B", "short_pct": 0.216, "action": "watch"}
+  ],
+  "top_trade_candidate": {"symbol": "CYCN", "score": 80.0, "direction": "long"},
+  "next_scheduled_task": {
+    "name": "budget-dashboard-sync",
+    "next_run_local": "2026-05-28 12:07 PT",
+    "last_run_local": "2026-05-28 09:57 PT",
+    "last_run_result": "completed (no error reported)"
+  },
+  "dashboard_self_next_run_local": "2026-05-28 12:03 PT",
+  "notes": [
+    "Status held at yellow for consistency with prior runs: no findings are open and there is no FAIL, but 8 RED repos and 1 active FLAG warrant a non-green signal.",
+    "Squeeze Prophet rendered as percentages/direction only; no absolute dollar P&L or position sizes per skill pitfalls.",
+    "Inputs unchanged since the 17:04 run (same dated logs and health.json)."
+  ]
+}

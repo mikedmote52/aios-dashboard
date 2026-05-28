@@ -1,0 +1,47 @@
+{
+  "generated_at_utc": "2026-05-28T20:05:37Z",
+  "generated_at_local": "2026-05-28T13:05 PDT",
+  "status": "yellow",
+  "status_reason": "8 red repos, 1 flag",
+  "today": {
+    "open_findings": 0,
+    "checkpoint_reds": 8,
+    "drift": { "mismatch": 2, "stale": 5, "extra": 7 },
+    "prophet_daemon": "OK",
+    "day_pnl_pct": 0.07,
+    "total_pnl_pct": 0.77
+  },
+  "last_audit": {
+    "checkpoint_source": "_audit/checkpoint-2026-05-27.log",
+    "checkpoint": { "red": 8, "yellow": 5, "info": 2, "error": 0, "green": 5, "repos": 20 },
+    "runtime_state_source": "_audit/runtime-state-scan-2026-05-28.log",
+    "runtime_state": { "missing": 1, "extra": 7, "mismatch": 2, "stale": 5, "healthy": 23 },
+    "squeeze_prophet": { "discovered": 563, "evaluated": 50, "ready_to_trade": 10 }
+  },
+  "findings": {
+    "open": [],
+    "flags": [
+      {
+        "name": "trading-bot-tool-audit-2026-05-26",
+        "status": "flag",
+        "file": "file:///Users/michaelmote/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+        "summary": "Deny list intact; 2 new MCP servers (filesystem read-only, workspace) in allow list without ledger approval. Low risk; verb-level deny patterns still shield all servers."
+      }
+    ]
+  },
+  "squeeze_prophet_pending": {
+    "top_picks": [
+      { "symbol": "ARCT", "score": 50, "conviction": "B", "short_pct": 0.2877, "action": "review for entry" },
+      { "symbol": "ANVS", "score": 43, "conviction": "B", "short_pct": 0.1515, "action": "watch" },
+      { "symbol": "ABEO", "score": 36, "conviction": "B", "short_pct": 0.2725, "action": "watch" },
+      { "symbol": "AVXL", "score": 36, "conviction": "B", "short_pct": 0.216, "action": "watch" }
+    ],
+    "top_trade_candidate": { "symbol": "CYCN", "score": 80, "direction": "long" }
+  },
+  "next_scheduled_task": {
+    "name": "llm-portfolio-track",
+    "next_run_local": "2026-05-28 14:11 PT (Thu)",
+    "last_run_local": "2026-05-27 14:12 PT (Wed)",
+    "dashboard_self_local": "2026-05-28 13:05 PT (Thu)"
+  }
+}
