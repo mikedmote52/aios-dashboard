@@ -32,9 +32,15 @@ import time
 from datetime import datetime, timedelta, timezone
 from html import escape
 
-HOME = pathlib.Path(os.path.expanduser("~"))
-DESKTOP = HOME / "Desktop"
-DASH = DESKTOP / "dashboard"
+# Anchor all paths on the script's own location rather than expanduser("~").
+# In the Cowork sandbox, $HOME is /sessions/<id> (NOT the mounted Desktop), so
+# "~/Desktop/dashboard" silently resolved to a phantom in-sandbox directory and
+# every automated run wrote index.html/snapshots to the wrong filesystem. The
+# script always lives in <Desktop>/dashboard/, so deriving DASH from __file__
+# is correct on both the host and the sandbox.
+DASH = pathlib.Path(__file__).resolve().parent
+DESKTOP = DASH.parent
+HOME = DESKTOP.parent
 DATA_DIR = DASH / "_data"
 INDEX = DASH / "index.html"
 
