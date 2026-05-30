@@ -145,8 +145,8 @@
     "schedule": "At 08:08 AM, every day",
     "cronExpression": "5 8,12,20 * * *",
     "enabled": true,
-    "nextRunAt": "2026-05-30T15:07:38.000Z",
-    "lastRunAt": "2026-05-30T03:07:59.307Z",
+    "nextRunAt": "2026-05-30T19:07:38.000Z",
+    "lastRunAt": "2026-05-30T15:08:00.772Z",
     "jitterSeconds": 158
   },
   {
@@ -156,8 +156,8 @@
     "schedule": "At 06:04 AM, every day",
     "cronExpression": "0 6-22 * * *",
     "enabled": true,
-    "nextRunAt": "2026-05-30T16:03:47.000Z",
-    "lastRunAt": "2026-05-30T15:04:09.799Z",
+    "nextRunAt": "2026-05-30T17:03:47.000Z",
+    "lastRunAt": "2026-05-30T16:04:10.085Z",
     "jitterSeconds": 227
   },
   {
