@@ -156,8 +156,8 @@
     "schedule": "At 06:04 AM, every day",
     "cronExpression": "0 6-22 * * *",
     "enabled": true,
-    "nextRunAt": "2026-05-31T01:03:47.000Z",
-    "lastRunAt": "2026-05-31T00:04:11.206Z",
+    "nextRunAt": "2026-05-31T04:03:47.000Z",
+    "lastRunAt": "2026-05-31T03:04:11.178Z",
     "jitterSeconds": 227
   },
   {
