@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  com.moteops.dashboard-publish
+
+  Host-side hourly job that commits and pushes whatever the Cowork-side
+  dashboard-publish skill left in ~/Desktop/dashboard. Runs at :08 past
+  the hour from 06:00 through 22:00 Pacific, i.e. ~2 minutes after the
+  Cowork skill fires at :06 and has had time to write its snapshot.
+
+  Install:
+    cp ~/Desktop/dashboard/com.moteops.dashboard-publish.plist \
+       ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/com.moteops.dashboard-publish.plist
+
+  Uninstall:
+    launchctl unload -w ~/Library/LaunchAgents/com.moteops.dashboard-publish.plist
+    rm ~/Library/LaunchAgents/com.moteops.dashboard-publish.plist
+
+  Logs: tail -f /tmp/dashboard_publish_push.log
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.moteops.dashboard-publish</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/michaelmote/Desktop/dashboard/publish-push.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>13</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>15</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>8</integer></dict>
+        <dict><key>Hour</key><integer>22</integer><key>Minute</key><integer>8</integer></dict>
+    </array>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/dashboard_publish_push.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/dashboard_publish_push.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin</string>
+        <key>HOME</key>
+        <string>/Users/michaelmote</string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/michaelmote/Desktop/dashboard</string>
+</dict>
+</plist>
