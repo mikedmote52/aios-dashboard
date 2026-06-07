@@ -1,0 +1,196 @@
+{
+  "generated_utc": "2026-06-07T01:31:56Z",
+  "generated_local": "Sat 18:31 PDT",
+  "date": "2026-06-06",
+  "status": "yellow",
+  "status_reason": "trading health missing; 1 task(s) stale",
+  "trading": {
+    "status": null,
+    "timestamp": null,
+    "total_pnl_pct": null,
+    "num_positions": null
+  },
+  "marketing": {
+    "heartbeat_path": null,
+    "agents_seen": [],
+    "agent_count": 0,
+    "last_heartbeat_ts": null,
+    "inbox_p0": 0,
+    "inbox_p1": 0,
+    "inbox_items": []
+  },
+  "findings": {
+    "items": [],
+    "open": 0,
+    "flag": 0
+  },
+  "news": {
+    "headline": null,
+    "ts": null
+  },
+  "action_list": {
+    "total": 0,
+    "urgent": 0,
+    "items": []
+  },
+  "checkpoint": {
+    "checkpoint_path": null,
+    "checkpoint_summary": null,
+    "runtime_path": null,
+    "runtime_summary": null
+  },
+  "scheduled_tasks": {
+    "available": true,
+    "tasks": [
+      {
+        "taskId": "wiring-probe",
+        "lastRunAt": "2026-05-17T19:36:14.554Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "DISABLED 2026-05-17. Test probe used to verify the Cowork scheduled-tasks dispatcher fires from ~/Documents/Claude/Scheduled/ \u2014 proved successful (34 minute-resolution fires recorded in ~/Desktop/_audit/_wiring-probe.log). Retained disabled for audit."
+      },
+      {
+        "taskId": "moteops-vp-briefing",
+        "lastRunAt": "2026-06-01T16:03:19.869Z",
+        "nextRunAt": "2026-06-08T16:02:30.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Briefing \u2014 Monday 9 AM PT. Compiles weekly status digest from all VP state files and Action Inbox for the Director to relay to Mike. Does not send iMessage directly."
+      },
+      {
+        "taskId": "moteops-vp-content",
+        "lastRunAt": "2026-06-04T15:01:37.431Z",
+        "nextRunAt": "2026-06-09T15:01:20.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Content \u2014 Tuesday and Thursday 8 AM PT. Drafts LinkedIn posts and Reddit comments anchored on real artifacts, staged to Action Inbox for Mike's one-tap approval. Never publishes externally."
+      },
+      {
+        "taskId": "moteops-vp-tracking",
+        "lastRunAt": "2026-06-06T14:08:42.220Z",
+        "nextRunAt": "2026-06-07T14:08:16.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Tracking \u2014 daily 7 AM PT. Collects North Star metric (qualified discovery calls/week via Calendly), checks VP state freshness, detects anomalies, writes metrics state. Never publishes externally."
+      },
+      {
+        "taskId": "moteops-director-weekly",
+        "lastRunAt": "2026-06-01T15:09:06.728Z",
+        "nextRunAt": "2026-06-08T15:08:17.000Z",
+        "enabled": true,
+        "description": "Mote Ops Marketing Director \u2014 Monday 8 AM PT. Reads VP state, compiles cross-VP status, sends Mike a weekly iMessage summary to (714) 612-0723. Monitors VP health and escalates Tier-3 items."
+      },
+      {
+        "taskId": "moteops-marketing-heartbeat-keeper",
+        "lastRunAt": "2026-05-17T19:57:14.143Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "SUPERSEDED 2026-05-17. Replaced by launchd com.moteops.marketing-heartbeat-keeper.plist which writes to the canonical Application Support heartbeats.jsonl directly from the host shell (no sandbox path-mapping issues). Disabled \u2014 retained for audit/history only."
+      },
+      {
+        "taskId": "checkpoint",
+        "lastRunAt": "2026-06-06T01:03:19.828Z",
+        "nextRunAt": "2026-06-09T01:02:55.000Z",
+        "enabled": true,
+        "description": "End-of-day git hygiene sweep across ~/Desktop/. Surfaces dirty repos, stale commits, and unpushed work. Silent when clean, iMessages Mike on drift."
+      },
+      {
+        "taskId": "activity-reconcile",
+        "lastRunAt": "2026-06-01T16:09:46.927Z",
+        "nextRunAt": "2026-06-08T16:08:57.000Z",
+        "enabled": true,
+        "description": "Weekly drift check. Walks filesystem activity against MEMORY.md / ventures.md classifications. Silent when zero drift, iMessages Mike on mismatch."
+      },
+      {
+        "taskId": "runtime-state-scan",
+        "lastRunAt": "2026-06-06T14:12:29.215Z",
+        "nextRunAt": "2026-06-07T14:12:03.000Z",
+        "enabled": true,
+        "description": "Daily 7:05 AM scan of live automation state vs ~/Documents/Claude/automation-registry.md manifest. Silent when matched, iMessages Mike on drift."
+      },
+      {
+        "taskId": "audit-learning-report",
+        "lastRunAt": "2026-06-05T21:38:34.349Z",
+        "nextRunAt": "2026-06-08T21:38:10.000Z",
+        "enabled": true,
+        "description": "Audits the trading bot's latest learning_report.json against statistical defensibility checks. Fires 14:30 PT weekdays right after the nightly learner. Silent on accept, iMessages Mike on reject/escalate."
+      },
+      {
+        "taskId": "llm-portfolio-generate",
+        "lastRunAt": "2026-06-01T14:05:37.714Z",
+        "nextRunAt": "2026-07-01T14:04:48.000Z",
+        "enabled": true,
+        "description": "Generate a new 15-stock LLM portfolio on the 1st of each month at 7am PT."
+      },
+      {
+        "taskId": "llm-portfolio-track",
+        "lastRunAt": "2026-06-05T21:11:52.379Z",
+        "nextRunAt": "2026-06-08T21:11:28.000Z",
+        "enabled": true,
+        "description": "Track daily P&L on the active LLM portfolio. Weekdays at 2:05pm PT (after market close)."
+      },
+      {
+        "taskId": "llm-portfolio-monthly-report",
+        "lastRunAt": "2026-06-03T21:38:16.863Z",
+        "nextRunAt": "2026-07-01T21:38:02.000Z",
+        "enabled": true,
+        "description": "Monthly report for the LLM Portfolio \u2014 runs early month on days 1-3 at 2:30pm PT; the script picks the most recently closed hold window."
+      },
+      {
+        "taskId": "budget-dashboard-sync",
+        "lastRunAt": "2026-06-06T19:08:04.955Z",
+        "nextRunAt": "2026-06-07T03:07:38.000Z",
+        "enabled": true,
+        "description": "Budget dashboard Era sync \u2014 fires 8:05 AM, 12:05 PM, 8:05 PM PT. Pulls Era accounts + transactions, regenerates data.json/era_snapshot.json/index.html, commits and pushes to origin/main."
+      },
+      {
+        "taskId": "dashboard-publish-hourly",
+        "lastRunAt": "2026-06-07T01:04:39.718Z",
+        "nextRunAt": "2026-06-07T02:03:47.000Z",
+        "enabled": true,
+        "description": "Hourly AIOS dashboard publish during waking hours. Generates an operator-view dashboard organised around the five questions Mike asks at a glance (status, scheduled-task health, action inbox, Mote Ops today, trends). Pushes to mikedmote52/aios-dashboard on GitHub Pages."
+      },
+      {
+        "taskId": "trading-bot-tool-audit-daily",
+        "lastRunAt": "2026-06-06T13:24:35.294Z",
+        "nextRunAt": "2026-06-07T13:24:09.000Z",
+        "enabled": true,
+        "description": "Daily audit of Squeeze Prophet MCP allow-list and forbidden-verb deny set."
+      },
+      {
+        "taskId": "plan-mode-compliance-daily",
+        "lastRunAt": "2026-06-06T13:33:00.581Z",
+        "nextRunAt": "2026-06-07T13:32:34.000Z",
+        "enabled": true,
+        "description": "Daily verification that all client engagement sessions started in Plan Mode."
+      },
+      {
+        "taskId": "memory-tool-write-audit-daily",
+        "lastRunAt": "2026-06-06T13:48:53.344Z",
+        "nextRunAt": "2026-06-07T13:48:27.000Z",
+        "enabled": true,
+        "description": "Daily audit of Anthropic Memory tool writes for engagements using Managed Agents."
+      },
+      {
+        "taskId": "news-scout",
+        "lastRunAt": "2026-06-06T14:38:49.300Z",
+        "nextRunAt": "2026-06-07T14:38:23.000Z",
+        "enabled": true,
+        "description": "Daily 7:30 AM PT AI/tech news scout. Pulls last 24h, runs two filters (personal stack + Mote Ops opportunity lens), delivers one iMessage digest to +17146120723."
+      },
+      {
+        "taskId": "intel-weekly",
+        "lastRunAt": "2026-06-01T15:02:18.850Z",
+        "nextRunAt": "2026-06-08T15:01:29.000Z",
+        "enabled": true,
+        "description": "Monday 8 AM PT weekly research on AI capabilities, competitor moves, and new tools/frameworks Mike could use. Runs the intel skill at ~/mote-ops/ops/.claude/skills/intel/."
+      }
+    ],
+    "source": "mcp-sidecar"
+  },
+  "calls_this_week": null,
+  "data_gaps": [
+    "pipeline state (~/mote-ops/pipeline/data/command_state.json) for next call, active prospects, intake verdict",
+    "intel feed (~/mote-ops/ops/.claude/skills/intel/dashboard-feed.json) for weekly observation",
+    "client staged SOWs (~/mote-ops/clients/*/staged_replies/) for approvals queue",
+    "Hermes audit findings (intel-feed repo) for audit-ready items",
+    "Calendly source for calls-this-week metric (vp-tracking reports null)"
+  ]
+}
