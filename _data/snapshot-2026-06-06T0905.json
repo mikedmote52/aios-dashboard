@@ -1,0 +1,240 @@
+{
+  "generated_utc": "2026-06-06T16:05:13Z",
+  "generated_local": "Sat 09:05 PDT",
+  "date": "2026-06-06",
+  "status": "red",
+  "status_reason": "2 marketing P0; 1 flag",
+  "trading": {
+    "status": "OK",
+    "timestamp": "2026-06-06T13:14:12.870617+00:00",
+    "total_pnl_pct": 0.77,
+    "num_positions": 4
+  },
+  "marketing": {
+    "heartbeat_path": "/sessions/vigilant-jolly-tesla/mnt/Desktop/mote-ops/marketing/heartbeat-2026-06-05.jsonl",
+    "agents_seen": [
+      "vp-tracking"
+    ],
+    "agent_count": 1,
+    "last_heartbeat_ts": "2026-06-05T07:00:00-07:00",
+    "inbox_p0": 2,
+    "inbox_p1": 2,
+    "inbox_items": [
+      {
+        "priority": "P0",
+        "title": "Notification-router watchdog is dead and its marketing dead-flags are false positives",
+        "status": "VERIFIED again this run (28 days stale)",
+        "detail": "notification-router/state.json last_run is frozen at 2026-05-08T21:26Z \u2014 now 28 days stale. The moteops_marketing.watchdog_dead flag (marketing-director, first_seen 2026-05-04, last_seen 2026-05-08, consecutive_sessions 19, policy_kind info_only) still has resolved_at: null. Meanwhile the VP agents ARE running \u2014 vp-tracking heartbeats exist for 05-28 through 06-04 and now 06-05, plus vp-content 06-04 and director 06-01. Conclusion: the watchdog that declared the marketing hierarchy 'dead' is itself stale/stopped; the dead-flag is a stale false positive. Recommend: restart the watchdog so it tracks the new scheduled-task heartbeats, or decommission it and clear the stale dead-flag so it stops polluting signal."
+      },
+      {
+        "priority": "P0",
+        "title": "Router queue backlog persists uncleaned (~81k files)",
+        "status": "VERIFIED again this run",
+        "detail": "queue holds 33,045 files and queue/expired holds 48,174 (~81,219 total), unchanged from prior runs \u2014 never purged. Newest queue file is still dated 2026-05-18T16:41Z, so active flooding remains halted ~2026-05-17/18; this is a cleanup problem rather than an active runaway. Recommend purging both directories and confirming the cooldown/dedup fix landed before relying on router signal."
+      },
+      {
+        "priority": "P1",
+        "title": "Clear the four QA/test events off the week-of-06-01 calendar",
+        "status": "Carried forward from 06-04; still uncleared",
+        "detail": "The four test bookings (Pipeline Test Co, Idem Test Co, Brightway Bookkeeping/Dana Reeves [canceled fake-person test], and the Michael-Mote-to-Michael-Mote self-test) are still present on mikedmote5258@gmail.com for the week of 06-01. They were not re-created this run (calendar `updated` unchanged at 2026-06-04T06:11:45Z). They do not count toward the North Star, but leaving them clutters the week and risks confusing future manual reads. Recommend deleting them. NOTE: VP-Tracking did not delete them itself \u2014 that is a write/cleanup action outside the read-only metric mandate."
+      },
+      {
+        "priority": "P1",
+        "title": "Doctrine and canonical state still outside connected folders",
+        "detail": "mission.md, vps/tracking/instructions.md, .claude/skills/vp-tracking-run/SKILL.md, lib/agent_contract.py, and the canonical ~/Library/Application Support/MoteopsMarketing/state/agents.json remain unreachable. The /Users/michaelmote/mote-ops home path cited in the task does not exist; the live tree is at Desktop/mote-ops/marketing and contains only vps/ state and heartbeats. VP-Tracking is still applying a reasonable-default qualification rubric and writing to the Desktop analog instead of canonical paths. Connect the mote-ops home directory (or sync doctrine into the connected folder) so the real rubric and canonical Director-state path are used."
+      },
+      {
+        "priority": "P2",
+        "title": "Connect Calendly directly (mitigated, low urgency)",
+        "detail": "North Star is reliably obtained via the connected Google Calendar mirror of calendly.com/mikedmote (primary cal mikedmote5258@gmail.com). The mirror captures events promptly (confirmed by the 06-04 test bookings). A direct Calendly connection would still capture booking/cancel/qualification metadata more reliably, but the current pipeline works."
+      }
+    ]
+  },
+  "findings": {
+    "items": [
+      {
+        "name": "trading-bot-tool-audit-2026-05-26",
+        "path": "file:///sessions/vigilant-jolly-tesla/mnt/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+        "status": "flag",
+        "verdict": "",
+        "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.clau"
+      }
+    ],
+    "open": 0,
+    "flag": 1
+  },
+  "news": {
+    "headline": "Anthropic: starting 6/15, programmatic Claude use on subscription plans moves to a separate monthly credit pool. Your scheduled tasks (Budget dashboard sync, Notification router, this scout, Scam-baiter) likely draw from it \u2014 audit which run on subscription vs API key before 6/15 and move load-bearing ones to API billing or they may throttle.",
+    "ts": "2026-06-06T14:41:59.666356+00:00"
+  },
+  "action_list": {
+    "total": 19,
+    "urgent": 4,
+    "urgent_items": [
+      "Rotate the Anthropic API key at console.anthropic.com \u2014 especially the one copied into 7 files (sk-ant-api03-R0ZCusv...). Full list at `~/Desktop/_audit/CRITICAL-ROTATE.md`.",
+      "Rotate the Moltbook API key at their portal.",
+      "Top up Anthropic credit so morning-trading-brief stops failing daily.",
+      "Plug in a USB drive at home and turn on Time Machine. You currently have zero backups configured."
+    ]
+  },
+  "checkpoint": {
+    "checkpoint_path": "/sessions/vigilant-jolly-tesla/mnt/Desktop/_audit/checkpoint-2026-06-05.log",
+    "checkpoint_summary": "checkpoint-2026-06-05.log",
+    "runtime_path": "/sessions/vigilant-jolly-tesla/mnt/Desktop/_audit/runtime-state-scan-2026-06-06.log",
+    "runtime_summary": "3 stale"
+  },
+  "scheduled_tasks": {
+    "available": true,
+    "tasks": [
+      {
+        "taskId": "wiring-probe",
+        "lastRunAt": "2026-05-17T19:36:14.554Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "DISABLED 2026-05-17. Test probe used to verify the Cowork scheduled-tasks dispatcher fires from ~/Documents/Claude/Scheduled/ \u2014 proved successful (34 minute-resolution fires recorded in ~/Desktop/_audit/_wiring-probe.log). Retained disabled for audit."
+      },
+      {
+        "taskId": "moteops-vp-briefing",
+        "lastRunAt": "2026-06-01T16:03:19.869Z",
+        "nextRunAt": "2026-06-08T16:02:30.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Briefing \u2014 Monday 9 AM PT. Compiles weekly status digest from all VP state files and Action Inbox for the Director to relay to Mike. Does not send iMessage directly."
+      },
+      {
+        "taskId": "moteops-vp-content",
+        "lastRunAt": "2026-06-04T15:01:37.431Z",
+        "nextRunAt": "2026-06-09T15:01:20.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Content \u2014 Tuesday and Thursday 8 AM PT. Drafts LinkedIn posts and Reddit comments anchored on real artifacts, staged to Action Inbox for Mike's one-tap approval. Never publishes externally."
+      },
+      {
+        "taskId": "moteops-vp-tracking",
+        "lastRunAt": "2026-06-06T14:08:42.220Z",
+        "nextRunAt": "2026-06-07T14:08:16.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Tracking \u2014 daily 7 AM PT. Collects North Star metric (qualified discovery calls/week via Calendly), checks VP state freshness, detects anomalies, writes metrics state. Never publishes externally."
+      },
+      {
+        "taskId": "moteops-director-weekly",
+        "lastRunAt": "2026-06-01T15:09:06.728Z",
+        "nextRunAt": "2026-06-08T15:08:17.000Z",
+        "enabled": true,
+        "description": "Mote Ops Marketing Director \u2014 Monday 8 AM PT. Reads VP state, compiles cross-VP status, sends Mike a weekly iMessage summary to (714) 612-0723. Monitors VP health and escalates Tier-3 items."
+      },
+      {
+        "taskId": "moteops-marketing-heartbeat-keeper",
+        "lastRunAt": "2026-05-17T19:57:14.143Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "SUPERSEDED 2026-05-17. Replaced by launchd com.moteops.marketing-heartbeat-keeper.plist which writes to the canonical Application Support heartbeats.jsonl directly from the host shell (no sandbox path-mapping issues). Disabled \u2014 retained for audit/history only."
+      },
+      {
+        "taskId": "checkpoint",
+        "lastRunAt": "2026-06-06T01:03:19.828Z",
+        "nextRunAt": "2026-06-09T01:02:55.000Z",
+        "enabled": true,
+        "description": "End-of-day git hygiene sweep across ~/Desktop/. Surfaces dirty repos, stale commits, and unpushed work. Silent when clean, iMessages Mike on drift."
+      },
+      {
+        "taskId": "activity-reconcile",
+        "lastRunAt": "2026-06-01T16:09:46.927Z",
+        "nextRunAt": "2026-06-08T16:08:57.000Z",
+        "enabled": true,
+        "description": "Weekly drift check. Walks filesystem activity against MEMORY.md / ventures.md classifications. Silent when zero drift, iMessages Mike on mismatch."
+      },
+      {
+        "taskId": "runtime-state-scan",
+        "lastRunAt": "2026-06-06T14:12:29.215Z",
+        "nextRunAt": "2026-06-07T14:12:03.000Z",
+        "enabled": true,
+        "description": "Daily 7:05 AM scan of live automation state vs ~/Documents/Claude/automation-registry.md manifest. Silent when matched, iMessages Mike on drift."
+      },
+      {
+        "taskId": "audit-learning-report",
+        "lastRunAt": "2026-06-05T21:38:34.349Z",
+        "nextRunAt": "2026-06-08T21:38:10.000Z",
+        "enabled": true,
+        "description": "Audits the trading bot's latest learning_report.json against statistical defensibility checks. Fires 14:30 PT weekdays right after the nightly learner. Silent on accept, iMessages Mike on reject/escalate."
+      },
+      {
+        "taskId": "llm-portfolio-generate",
+        "lastRunAt": "2026-06-01T14:05:37.714Z",
+        "nextRunAt": "2026-07-01T14:04:48.000Z",
+        "enabled": true,
+        "description": "Generate a new 15-stock LLM portfolio on the 1st of each month at 7am PT."
+      },
+      {
+        "taskId": "llm-portfolio-track",
+        "lastRunAt": "2026-06-05T21:11:52.379Z",
+        "nextRunAt": "2026-06-08T21:11:28.000Z",
+        "enabled": true,
+        "description": "Track daily P&L on the active LLM portfolio. Weekdays at 2:05pm PT (after market close)."
+      },
+      {
+        "taskId": "llm-portfolio-monthly-report",
+        "lastRunAt": "2026-06-03T21:38:16.863Z",
+        "nextRunAt": "2026-07-01T21:38:02.000Z",
+        "enabled": true,
+        "description": "Monthly report for the LLM Portfolio \u2014 runs early month on days 1-3 at 2:30pm PT; the script picks the most recently closed hold window."
+      },
+      {
+        "taskId": "budget-dashboard-sync",
+        "lastRunAt": "2026-06-06T15:08:04.430Z",
+        "nextRunAt": "2026-06-06T19:07:38.000Z",
+        "enabled": true,
+        "description": "Budget dashboard Era sync \u2014 fires 8:05 AM, 12:05 PM, 8:05 PM PT. Pulls Era accounts + transactions, regenerates data.json/era_snapshot.json/index.html, commits and pushes to origin/main."
+      },
+      {
+        "taskId": "dashboard-publish-hourly",
+        "lastRunAt": "2026-06-06T16:04:13.742Z",
+        "nextRunAt": "2026-06-06T17:03:47.000Z",
+        "enabled": true,
+        "description": "Hourly AIOS dashboard publish during waking hours. Generates an operator-view dashboard organised around the five questions Mike asks at a glance (status, scheduled-task health, action inbox, Mote Ops today, trends). Pushes to mikedmote52/aios-dashboard on GitHub Pages."
+      },
+      {
+        "taskId": "trading-bot-tool-audit-daily",
+        "lastRunAt": "2026-06-06T13:24:35.294Z",
+        "nextRunAt": "2026-06-07T13:24:09.000Z",
+        "enabled": true,
+        "description": "Daily audit of Squeeze Prophet MCP allow-list and forbidden-verb deny set."
+      },
+      {
+        "taskId": "plan-mode-compliance-daily",
+        "lastRunAt": "2026-06-06T13:33:00.581Z",
+        "nextRunAt": "2026-06-07T13:32:34.000Z",
+        "enabled": true,
+        "description": "Daily verification that all client engagement sessions started in Plan Mode."
+      },
+      {
+        "taskId": "memory-tool-write-audit-daily",
+        "lastRunAt": "2026-06-06T13:48:53.344Z",
+        "nextRunAt": "2026-06-07T13:48:27.000Z",
+        "enabled": true,
+        "description": "Daily audit of Anthropic Memory tool writes for engagements using Managed Agents."
+      },
+      {
+        "taskId": "news-scout",
+        "lastRunAt": "2026-06-06T14:38:49.300Z",
+        "nextRunAt": "2026-06-07T14:38:23.000Z",
+        "enabled": true,
+        "description": "Daily 7:30 AM PT AI/tech news scout. Pulls last 24h, runs two filters (personal stack + Mote Ops opportunity lens), delivers one iMessage digest to +17146120723."
+      },
+      {
+        "taskId": "intel-weekly",
+        "lastRunAt": "2026-06-01T15:02:18.850Z",
+        "nextRunAt": "2026-06-08T15:01:29.000Z",
+        "enabled": true,
+        "description": "Monday 8 AM PT weekly research on AI capabilities, competitor moves, and new tools/frameworks Mike could use. Runs the intel skill at ~/mote-ops/ops/.claude/skills/intel/."
+      }
+    ],
+    "source": "mcp-sidecar"
+  },
+  "calls_this_week": 0,
+  "data_gaps": [
+    "pipeline state (~/mote-ops/pipeline/data/command_state.json) for next call, active prospects, intake verdict",
+    "intel feed (~/mote-ops/ops/.claude/skills/intel/dashboard-feed.json) for weekly observation",
+    "client staged SOWs (~/mote-ops/clients/*/staged_replies/) for approvals queue",
+    "Hermes audit findings (intel-feed repo) for audit-ready items",
+    "Calendly source for calls-this-week metric (vp-tracking reports null)"
+  ]
+}
