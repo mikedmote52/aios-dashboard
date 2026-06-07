@@ -21,7 +21,12 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$PATH"
 
 LOG=/tmp/dashboard_publish_push.log
-DASH_DIR="$HOME/Desktop/dashboard"
+# Real repo lives OFF the Desktop so a launchd-spawned process can read it
+# without a TCC grant. ~/Desktop/dashboard is a symlink to this path; the
+# Cowork build writes through that symlink, but git here MUST use the real
+# off-Desktop path — a CWD inside the TCC-protected Desktop tree returns
+# "Operation not permitted" when git reads the working directory.
+DASH_DIR="$HOME/dashboard"
 
 echo "=== START $(date) ===" >> "$LOG"
 

@@ -4,13 +4,20 @@
   com.moteops.dashboard-publish
 
   Host-side hourly job that commits and pushes whatever the Cowork-side
-  dashboard-publish skill left in ~/Desktop/dashboard. Runs at :08 past
-  the hour from 06:00 through 22:00 Pacific, i.e. ~2 minutes after the
-  Cowork skill fires at :06 and has had time to write its snapshot.
+  dashboard-publish skill left in ~/Desktop/dashboard (a symlink to the
+  real repo at ~/dashboard). Runs at :08 past the hour from 06:00 through
+  22:00 Pacific, i.e. ~2 minutes after the Cowork skill fires at :06 and
+  has had time to write its snapshot.
+
+  The repo is deliberately OFF the Desktop: launchd-spawned processes are
+  blocked by macOS TCC from reading ~/Desktop, so the script cd's into the
+  real ~/dashboard path. ~/Desktop/dashboard remains a symlink so the
+  Cowork build (which has Desktop access) keeps writing through it.
 
   Install:
-    cp ~/Desktop/dashboard/com.moteops.dashboard-publish.plist \
+    cp ~/dashboard/com.moteops.dashboard-publish.plist \
        ~/Library/LaunchAgents/
+    launchctl unload ~/Library/LaunchAgents/com.moteops.dashboard-publish.plist 2>/dev/null
     launchctl load -w ~/Library/LaunchAgents/com.moteops.dashboard-publish.plist
 
   Uninstall:
@@ -27,7 +34,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/michaelmote/Desktop/dashboard/publish-push.sh</string>
+        <string>/Users/michaelmote/dashboard/publish-push.sh</string>
     </array>
 
     <key>StartCalendarInterval</key>
@@ -69,6 +76,6 @@
     </dict>
 
     <key>WorkingDirectory</key>
-    <string>/Users/michaelmote/Desktop/dashboard</string>
+    <string>/Users/michaelmote/dashboard</string>
 </dict>
 </plist>
