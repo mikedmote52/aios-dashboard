@@ -32,17 +32,24 @@ import time
 from datetime import datetime, timedelta, timezone
 from html import escape
 
-# Anchor all paths on the script's own location rather than expanduser("~").
-# In the Cowork sandbox, $HOME is /sessions/<id> (NOT the mounted Desktop), so
-# "~/Desktop/dashboard" silently resolved to a phantom in-sandbox directory and
-# every automated run wrote index.html/snapshots to the wrong filesystem. The
-# script always lives in <Desktop>/dashboard/, so deriving DASH from __file__
-# is correct on both the host and the sandbox.
+# OUTPUT location: anchor on the script's own location. The repo now lives at
+# ~/dashboard (moved off the Desktop to fix publishing), with ~/Desktop/dashboard
+# a symlink to it. index.html and _data/ must be written into the real repo, so
+# deriving DASH from __file__.resolve() is correct.
 DASH = pathlib.Path(__file__).resolve().parent
-DESKTOP = DASH.parent
-HOME = DESKTOP.parent
 DATA_DIR = DASH / "_data"
 INDEX = DASH / "index.html"
+
+# DATA-SOURCE location: anchor explicitly on the real Desktop tree, NOT relative
+# to the repo. The repo used to live at ~/Desktop/dashboard, so DASH.parent was
+# ~/Desktop and inputs resolved correctly. After moving the repo to ~/dashboard,
+# DASH.parent became ~ (home) and every input (mikes-trading-bot, mote-ops/
+# marketing, _audit, ...) silently read the near-empty/absent home tree. Anchor
+# DESKTOP to Path.home()/"Desktop" so inputs read the true data tree regardless
+# of where this script physically lives. HOME stays home (used only for the
+# home-tree ~/Documents/Claude/Scheduled path).
+HOME = pathlib.Path.home()
+DESKTOP = HOME / "Desktop"
 
 PDT = timezone(timedelta(hours=-7))   # PDT; PST swap not handled, fine for now
 
