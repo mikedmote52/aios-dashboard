@@ -32,24 +32,19 @@ import time
 from datetime import datetime, timedelta, timezone
 from html import escape
 
-# OUTPUT location: anchor on the script's own location. The repo now lives at
-# ~/dashboard (moved off the Desktop to fix publishing), with ~/Desktop/dashboard
-# a symlink to it. index.html and _data/ must be written into the real repo, so
-# deriving DASH from __file__.resolve() is correct.
+# Both OUTPUT and DATA-SOURCE paths anchor on the script's own resolved location.
+# The repo lives at ~/Desktop/dashboard (a REAL directory — do not relocate it; the
+# hourly build runs in a sandbox that can't follow a symlink out of its Desktop
+# mount). Critically, that sandbox's Path.home() is NOT the Mac home, so do NOT
+# anchor data paths to Path.home()/"Desktop" — that reads an empty tree and the
+# dashboard goes falsely yellow. Deriving relative to DASH lands on the mounted
+# Desktop in the sandbox and on the real Desktop on the host. DASH = repo dir;
+# DESKTOP = its parent (the real Desktop tree); HOME = one above that.
 DASH = pathlib.Path(__file__).resolve().parent
 DATA_DIR = DASH / "_data"
 INDEX = DASH / "index.html"
-
-# DATA-SOURCE location: anchor explicitly on the real Desktop tree, NOT relative
-# to the repo. The repo used to live at ~/Desktop/dashboard, so DASH.parent was
-# ~/Desktop and inputs resolved correctly. After moving the repo to ~/dashboard,
-# DASH.parent became ~ (home) and every input (mikes-trading-bot, mote-ops/
-# marketing, _audit, ...) silently read the near-empty/absent home tree. Anchor
-# DESKTOP to Path.home()/"Desktop" so inputs read the true data tree regardless
-# of where this script physically lives. HOME stays home (used only for the
-# home-tree ~/Documents/Claude/Scheduled path).
-HOME = pathlib.Path.home()
-DESKTOP = HOME / "Desktop"
+DESKTOP = DASH.parent
+HOME = DESKTOP.parent
 
 PDT = timezone(timedelta(hours=-7))   # PDT; PST swap not handled, fine for now
 
