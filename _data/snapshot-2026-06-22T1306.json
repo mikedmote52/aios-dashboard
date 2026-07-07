@@ -1,0 +1,236 @@
+{
+  "generated_utc": "2026-06-22T20:06:00Z",
+  "generated_local": "Mon 13:06 PDT",
+  "date": "2026-06-22",
+  "status": "yellow",
+  "status_reason": "1 flag; 2 task(s) stale",
+  "trading": {
+    "status": "OK",
+    "timestamp": "2026-06-14T13:14:01.490723+00:00",
+    "total_pnl_pct": 0.75,
+    "num_positions": 4
+  },
+  "marketing": {
+    "heartbeat_path": "/sessions/intelligent-gracious-thompson/mnt/Desktop/mote-ops/marketing/heartbeat-2026-06-22.jsonl",
+    "agents_seen": [
+      "marketing-director",
+      "vp-briefing",
+      "vp-tracking"
+    ],
+    "agent_count": 3,
+    "last_heartbeat_ts": "2026-06-22T09:00:00-07:00",
+    "inbox_p0": 0,
+    "inbox_p1": 0,
+    "inbox_items": [
+      {
+        "priority": "P2",
+        "title": "Week 2026-06-15 opened at 0 qualified \u2014 3 self-test events land Friday (2026-06-19)",
+        "detail": "Week of 2026-06-15 begins with no real bookings. Three disqualified self-test events (attendees: mikedmote@yahoo.com, mikedmote+workflow-proof-0124@yahoo.com) are scheduled for 2026-06-19 10:00\u201312:30 PT. These are consistent with prior QA/workflow-proof pattern \u2014 not real prospects. Watch for real bookings alongside or after the test cluster.",
+        "test_event_ids": [
+          "5fgulgfa7sskb9hgaceoegp8o0",
+          "mlf0j6ge2b2p0q0u7nku9bm07s",
+          "i4jv1hl61mathq3g4afcp18j5s"
+        ]
+      },
+      {
+        "priority": "P3",
+        "title": "Router queue backlog persists (unverified, ~38 days stale)",
+        "detail": "notification-router tree inaccessible. Last known: ~81k files. Carry forward for human resolution."
+      }
+    ]
+  },
+  "findings": {
+    "items": [
+      {
+        "name": "dashboard-publish-symlink-break-2026-06-06",
+        "path": "file:///sessions/intelligent-gracious-thompson/mnt/Desktop/_audit/findings/dashboard-publish-symlink-break-2026-06-06.md",
+        "status": "fail",
+        "verdict": "",
+        "summary": "The hourly dashboard build could not run. `~/Desktop/dashboard` is no longer a"
+      },
+      {
+        "name": "trading-bot-tool-audit-2026-05-26",
+        "path": "file:///sessions/intelligent-gracious-thompson/mnt/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+        "status": "flag",
+        "verdict": "",
+        "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.clau"
+      }
+    ],
+    "open": 0,
+    "flag": 1
+  },
+  "news": {
+    "headline": "WHAT: OpenAI launched a $150M Partner Network (June 14) certifying 300K consultants through Accenture, BCG, McKinsey, and PwC with tiered deal-flow incentives and brand backing.",
+    "ts": "2026-06-22T14:42:44.319620+00:00"
+  },
+  "action_list": {
+    "total": 19,
+    "urgent": 4,
+    "urgent_items": [
+      "Rotate the Anthropic API key at console.anthropic.com \u2014 especially the one copied into 7 files (sk-ant-api03-R0ZCusv...). Full list at `~/Desktop/_audit/CRITICAL-ROTATE.md`.",
+      "Rotate the Moltbook API key at their portal.",
+      "Top up Anthropic credit so morning-trading-brief stops failing daily.",
+      "Plug in a USB drive at home and turn on Time Machine. You currently have zero backups configured."
+    ]
+  },
+  "checkpoint": {
+    "checkpoint_path": "/sessions/intelligent-gracious-thompson/mnt/Desktop/_audit/checkpoint-2026-06-18.log",
+    "checkpoint_summary": "checkpoint-2026-06-18.log",
+    "runtime_path": "/sessions/intelligent-gracious-thompson/mnt/Desktop/_audit/runtime-state-scan-2026-06-22.log",
+    "runtime_summary": "runtime-state-scan-2026-06-22.log"
+  },
+  "scheduled_tasks": {
+    "available": true,
+    "tasks": [
+      {
+        "taskId": "wiring-probe",
+        "lastRunAt": "2026-05-17T19:36:14.554Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "DISABLED 2026-05-17."
+      },
+      {
+        "taskId": "moteops-vp-briefing",
+        "lastRunAt": "2026-06-22T16:03:01.597Z",
+        "nextRunAt": "2026-06-29T16:02:30.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Briefing -- Monday 9 AM PT."
+      },
+      {
+        "taskId": "moteops-vp-content",
+        "lastRunAt": "2026-06-18T21:21:57.956Z",
+        "nextRunAt": "2026-06-23T15:01:20.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Content -- Tuesday and Thursday 8 AM PT."
+      },
+      {
+        "taskId": "moteops-vp-tracking",
+        "lastRunAt": "2026-06-22T14:08:47.288Z",
+        "nextRunAt": "2026-06-23T14:08:16.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Tracking -- daily 7 AM PT."
+      },
+      {
+        "taskId": "moteops-director-weekly",
+        "lastRunAt": "2026-06-22T15:08:48.336Z",
+        "nextRunAt": "2026-06-29T15:08:17.000Z",
+        "enabled": true,
+        "description": "Mote Ops Marketing Director -- Monday 8 AM PT."
+      },
+      {
+        "taskId": "moteops-marketing-heartbeat-keeper",
+        "lastRunAt": "2026-05-17T19:57:14.143Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "SUPERSEDED 2026-05-17."
+      },
+      {
+        "taskId": "checkpoint",
+        "lastRunAt": "2026-06-20T01:02:55.851Z",
+        "nextRunAt": "2026-06-23T01:02:55.000Z",
+        "enabled": true,
+        "description": "End-of-day git hygiene sweep across ~/Desktop/."
+      },
+      {
+        "taskId": "activity-reconcile",
+        "lastRunAt": "2026-06-22T16:09:28.480Z",
+        "nextRunAt": "2026-06-29T16:08:57.000Z",
+        "enabled": true,
+        "description": "Weekly drift check."
+      },
+      {
+        "taskId": "runtime-state-scan",
+        "lastRunAt": "2026-06-22T14:12:34.206Z",
+        "nextRunAt": "2026-06-23T14:12:03.000Z",
+        "enabled": true,
+        "description": "Daily 7:05 AM scan of live automation state."
+      },
+      {
+        "taskId": "audit-learning-report",
+        "lastRunAt": "2026-06-19T21:38:10.753Z",
+        "nextRunAt": "2026-06-22T21:38:10.000Z",
+        "enabled": true,
+        "description": "Audits the trading bot's latest learning_report.json."
+      },
+      {
+        "taskId": "llm-portfolio-generate",
+        "lastRunAt": "2026-06-01T14:05:37.714Z",
+        "nextRunAt": "2026-07-01T14:04:48.000Z",
+        "enabled": true,
+        "description": "Generate a new 15-stock LLM portfolio on the 1st of each month at 7am PT."
+      },
+      {
+        "taskId": "llm-portfolio-track",
+        "lastRunAt": "2026-06-19T21:12:28.385Z",
+        "nextRunAt": "2026-06-22T21:11:28.000Z",
+        "enabled": true,
+        "description": "Track daily P&L on the active LLM portfolio."
+      },
+      {
+        "taskId": "llm-portfolio-monthly-report",
+        "lastRunAt": "2026-06-03T21:38:16.863Z",
+        "nextRunAt": "2026-07-01T21:38:02.000Z",
+        "enabled": true,
+        "description": "Monthly report for the LLM Portfolio."
+      },
+      {
+        "taskId": "budget-dashboard-sync",
+        "lastRunAt": "2026-06-10T19:08:01.352Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "Budget dashboard Era sync."
+      },
+      {
+        "taskId": "dashboard-publish-hourly",
+        "lastRunAt": "2026-06-22T20:04:19.228Z",
+        "nextRunAt": "2026-06-22T21:03:47.000Z",
+        "enabled": true,
+        "description": "Hourly AIOS dashboard publish during waking hours."
+      },
+      {
+        "taskId": "trading-bot-tool-audit-daily",
+        "lastRunAt": "2026-06-22T13:24:40.473Z",
+        "nextRunAt": "2026-06-23T13:24:09.000Z",
+        "enabled": true,
+        "description": "Daily audit of Squeeze Prophet MCP allow-list and forbidden-verb deny set."
+      },
+      {
+        "taskId": "plan-mode-compliance-daily",
+        "lastRunAt": "2026-06-22T13:33:05.828Z",
+        "nextRunAt": "2026-06-23T13:32:34.000Z",
+        "enabled": true,
+        "description": "Daily verification that all client engagement sessions started in Plan Mode."
+      },
+      {
+        "taskId": "memory-tool-write-audit-daily",
+        "lastRunAt": "2026-06-22T13:48:58.283Z",
+        "nextRunAt": "2026-06-23T13:48:27.000Z",
+        "enabled": true,
+        "description": "Daily audit of Anthropic Memory tool writes for engagements using Managed Agents."
+      },
+      {
+        "taskId": "news-scout",
+        "lastRunAt": "2026-06-22T14:38:54.505Z",
+        "nextRunAt": "2026-06-23T14:38:23.000Z",
+        "enabled": true,
+        "description": "Daily 7:30 AM PT AI/tech news scout."
+      },
+      {
+        "taskId": "intel-weekly",
+        "lastRunAt": "2026-06-22T15:02:00.432Z",
+        "nextRunAt": "2026-06-29T15:01:29.000Z",
+        "enabled": true,
+        "description": "Monday 8 AM PT weekly research on AI capabilities."
+      }
+    ],
+    "source": "mcp-sidecar"
+  },
+  "calls_this_week": 0,
+  "data_gaps": [
+    "pipeline state (~/mote-ops/pipeline/data/command_state.json) for next call, active prospects, intake verdict",
+    "intel feed (~/mote-ops/ops/.claude/skills/intel/dashboard-feed.json) for weekly observation",
+    "client staged SOWs (~/mote-ops/clients/*/staged_replies/) for approvals queue",
+    "Hermes audit findings (intel-feed repo) for audit-ready items",
+    "Calendly source for calls-this-week metric (vp-tracking reports null)"
+  ]
+}

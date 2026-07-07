@@ -21,12 +21,13 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:$PATH"
 
 LOG=/tmp/dashboard_publish_push.log
-# Real repo lives OFF the Desktop so a launchd-spawned process can read it
-# without a TCC grant. ~/Desktop/dashboard is a symlink to this path; the
-# Cowork build writes through that symlink, but git here MUST use the real
-# off-Desktop path — a CWD inside the TCC-protected Desktop tree returns
-# "Operation not permitted" when git reads the working directory.
-DASH_DIR="$HOME/dashboard"
+# Repo lives physically inside ~/Desktop because the hourly sandboxed BUILD
+# can only reach it there (the sandbox mounts ~/Desktop and cannot follow a
+# symlink to a target outside the mount). NOTE: a launchd-spawned process is
+# blocked by macOS TCC from reading ~/Desktop unless this job has been granted
+# Full Disk Access. Without that grant, the git commands below fail with
+# "Operation not permitted". See the plist header for the FDA requirement.
+DASH_DIR="$HOME/Desktop/dashboard"
 
 echo "=== START $(date) ===" >> "$LOG"
 

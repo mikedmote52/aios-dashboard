@@ -1,0 +1,234 @@
+{
+  "generated_utc": "2026-06-11T23:05:44Z",
+  "generated_local": "Thu 16:05 PDT",
+  "date": "2026-06-11",
+  "status": "yellow",
+  "status_reason": "1 marketing P1; 1 flag",
+  "trading": {
+    "status": "OK",
+    "timestamp": "2026-06-11T20:59:44.009894+00:00",
+    "total_pnl_pct": 0.74,
+    "num_positions": 4
+  },
+  "marketing": {
+    "heartbeat_path": "/sessions/great-keen-mccarthy/mnt/Desktop/mote-ops/marketing/heartbeat-2026-06-11.jsonl",
+    "agents_seen": [
+      "vp-content"
+    ],
+    "agent_count": 1,
+    "last_heartbeat_ts": "2026-06-11T08:00:00-07:00",
+    "inbox_p0": 0,
+    "inbox_p1": 1,
+    "inbox_items": [
+      {
+        "priority": "P1",
+        "title": "CC's Learning Center call has occurred \u2014 follow-up opportunity",
+        "detail": "The discovery call with Cindi (CC's Learning Center, Preschool, cmmote@roadrunner.com) was scheduled 2026-06-08 21:00 PT. As of today 2026-06-10 the event is confirmed and not canceled \u2014 the call has occurred. Follow-up or proposal may be warranted if the call went well. VP-Tracking does not contact Mike directly; Director/daily-pulse owns this signal."
+      },
+      {
+        "priority": "P2",
+        "title": "Router queue backlog persists (unverified this run)",
+        "detail": "notification-router tree not in accessible Desktop mount \u2014 couldn't reverify. Last known: ~81k files. Carry forward."
+      },
+      {
+        "priority": "P2",
+        "title": "Doctrine files still unreachable",
+        "detail": "mission.md, vps/tracking/instructions.md, SKILL.md, lib/agent_contract.py not in Desktop mount. Applying reasonable defaults."
+      }
+    ]
+  },
+  "findings": {
+    "items": [
+      {
+        "name": "dashboard-publish-symlink-break-2026-06-06",
+        "path": "file:///sessions/great-keen-mccarthy/mnt/Desktop/_audit/findings/dashboard-publish-symlink-break-2026-06-06.md",
+        "status": "fail",
+        "verdict": "",
+        "summary": "The hourly dashboard build could not run. `~/Desktop/dashboard` is no longer a"
+      },
+      {
+        "name": "trading-bot-tool-audit-2026-05-26",
+        "path": "file:///sessions/great-keen-mccarthy/mnt/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+        "status": "flag",
+        "verdict": "",
+        "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.clau"
+      }
+    ],
+    "open": 0,
+    "flag": 1
+  },
+  "news": {
+    "headline": "Anthropic shipped scheduled Managed Agents (cron + credential vaults) to public beta June 9. [Platform moves lens] The \"Claude agent in your infra\" sprint deliverable now has a native scheduler + zero-exposure secrets \u2014 no more bolting Vercel cron to a webhook. Update moteops.tech: \"We ship a scheduled Claude agent against your internal tools, running on Anthropic's managed platform.\" Lead with this in any prospect conversation about automation.",
+    "ts": "2026-06-11T16:10:04.660223+00:00"
+  },
+  "action_list": {
+    "total": 19,
+    "urgent": 4,
+    "urgent_items": [
+      "Rotate the Anthropic API key at console.anthropic.com \u2014 especially the one copied into 7 files (sk-ant-api03-R0ZCusv...). Full list at `~/Desktop/_audit/CRITICAL-ROTATE.md`.",
+      "Rotate the Moltbook API key at their portal.",
+      "Top up Anthropic credit so morning-trading-brief stops failing daily.",
+      "Plug in a USB drive at home and turn on Time Machine. You currently have zero backups configured."
+    ]
+  },
+  "checkpoint": {
+    "checkpoint_path": "/sessions/great-keen-mccarthy/mnt/Desktop/_audit/checkpoint-2026-06-10.log",
+    "checkpoint_summary": "checkpoint-2026-06-10.log",
+    "runtime_path": "/sessions/great-keen-mccarthy/mnt/Desktop/_audit/runtime-state-scan-2026-06-08.log",
+    "runtime_summary": "4 missing, 1 extra, 0 mismatch, 7 stale"
+  },
+  "scheduled_tasks": {
+    "available": true,
+    "tasks": [
+      {
+        "taskId": "wiring-probe",
+        "lastRunAt": "2026-05-17T19:36:14.554Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "DISABLED 2026-05-17."
+      },
+      {
+        "taskId": "moteops-vp-briefing",
+        "lastRunAt": "2026-06-08T16:03:27.400Z",
+        "nextRunAt": "2026-06-15T16:02:30.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Briefing"
+      },
+      {
+        "taskId": "moteops-vp-content",
+        "lastRunAt": "2026-06-11T15:47:25.698Z",
+        "nextRunAt": "2026-06-16T15:01:20.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Content"
+      },
+      {
+        "taskId": "moteops-vp-tracking",
+        "lastRunAt": "2026-06-11T15:47:25.873Z",
+        "nextRunAt": "2026-06-12T14:08:16.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Tracking"
+      },
+      {
+        "taskId": "moteops-director-weekly",
+        "lastRunAt": "2026-06-08T15:09:15.050Z",
+        "nextRunAt": "2026-06-15T15:08:17.000Z",
+        "enabled": true,
+        "description": "Mote Ops Marketing Director"
+      },
+      {
+        "taskId": "moteops-marketing-heartbeat-keeper",
+        "lastRunAt": "2026-05-17T19:57:14.143Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "SUPERSEDED 2026-05-17."
+      },
+      {
+        "taskId": "checkpoint",
+        "lastRunAt": "2026-06-11T01:03:19.007Z",
+        "nextRunAt": "2026-06-12T01:02:55.000Z",
+        "enabled": true,
+        "description": "End-of-day git hygiene sweep"
+      },
+      {
+        "taskId": "activity-reconcile",
+        "lastRunAt": "2026-06-08T16:09:54.369Z",
+        "nextRunAt": "2026-06-15T16:08:57.000Z",
+        "enabled": true,
+        "description": "Weekly drift check"
+      },
+      {
+        "taskId": "runtime-state-scan",
+        "lastRunAt": "2026-06-11T15:47:26.103Z",
+        "nextRunAt": "2026-06-12T14:12:03.000Z",
+        "enabled": true,
+        "description": "Daily runtime state scan"
+      },
+      {
+        "taskId": "audit-learning-report",
+        "lastRunAt": "2026-06-11T21:38:36.106Z",
+        "nextRunAt": "2026-06-12T21:38:10.000Z",
+        "enabled": true,
+        "description": "Trading bot learning report audit"
+      },
+      {
+        "taskId": "llm-portfolio-generate",
+        "lastRunAt": "2026-06-01T14:05:37.714Z",
+        "nextRunAt": "2026-07-01T14:04:48.000Z",
+        "enabled": true,
+        "description": "Generate LLM portfolio"
+      },
+      {
+        "taskId": "llm-portfolio-track",
+        "lastRunAt": "2026-06-11T21:11:53.987Z",
+        "nextRunAt": "2026-06-12T21:11:28.000Z",
+        "enabled": true,
+        "description": "Track LLM portfolio P&L"
+      },
+      {
+        "taskId": "llm-portfolio-monthly-report",
+        "lastRunAt": "2026-06-03T21:38:16.863Z",
+        "nextRunAt": "2026-07-01T21:38:02.000Z",
+        "enabled": true,
+        "description": "Monthly LLM portfolio report"
+      },
+      {
+        "taskId": "budget-dashboard-sync",
+        "lastRunAt": "2026-06-10T19:08:01.352Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "Budget dashboard Era sync"
+      },
+      {
+        "taskId": "dashboard-publish-hourly",
+        "lastRunAt": "2026-06-11T23:04:13.260Z",
+        "nextRunAt": "2026-06-12T00:03:47.000Z",
+        "enabled": true,
+        "description": "Hourly AIOS dashboard publish"
+      },
+      {
+        "taskId": "trading-bot-tool-audit-daily",
+        "lastRunAt": "2026-06-11T15:55:25.335Z",
+        "nextRunAt": "2026-06-12T13:24:09.000Z",
+        "enabled": true,
+        "description": "Daily audit of Squeeze Prophet MCP"
+      },
+      {
+        "taskId": "plan-mode-compliance-daily",
+        "lastRunAt": "2026-06-11T15:57:25.358Z",
+        "nextRunAt": "2026-06-12T13:32:34.000Z",
+        "enabled": true,
+        "description": "Daily plan mode compliance check"
+      },
+      {
+        "taskId": "memory-tool-write-audit-daily",
+        "lastRunAt": "2026-06-11T15:58:25.365Z",
+        "nextRunAt": "2026-06-12T13:48:27.000Z",
+        "enabled": true,
+        "description": "Daily memory tool write audit"
+      },
+      {
+        "taskId": "news-scout",
+        "lastRunAt": "2026-06-11T16:06:25.430Z",
+        "nextRunAt": "2026-06-12T14:38:23.000Z",
+        "enabled": true,
+        "description": "Daily AI/tech news scout"
+      },
+      {
+        "taskId": "intel-weekly",
+        "lastRunAt": "2026-06-08T15:02:26.187Z",
+        "nextRunAt": "2026-06-15T15:01:29.000Z",
+        "enabled": true,
+        "description": "Monday weekly intel research"
+      }
+    ],
+    "source": "mcp-sidecar"
+  },
+  "calls_this_week": null,
+  "data_gaps": [
+    "pipeline state (~/mote-ops/pipeline/data/command_state.json) for next call, active prospects, intake verdict",
+    "intel feed (~/mote-ops/ops/.claude/skills/intel/dashboard-feed.json) for weekly observation",
+    "client staged SOWs (~/mote-ops/clients/*/staged_replies/) for approvals queue",
+    "Hermes audit findings (intel-feed repo) for audit-ready items",
+    "Calendly source for calls-this-week metric (vp-tracking reports null)"
+  ]
+}

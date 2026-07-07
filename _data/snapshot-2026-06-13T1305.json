@@ -1,0 +1,237 @@
+{
+  "generated_utc": "2026-06-13T20:05:33Z",
+  "generated_local": "Sat 13:05 PDT",
+  "date": "2026-06-13",
+  "status": "yellow",
+  "status_reason": "1 flag",
+  "trading": {
+    "status": "OK",
+    "timestamp": "2026-06-13T19:58:04.659670+00:00",
+    "total_pnl_pct": 0.75,
+    "num_positions": 4
+  },
+  "marketing": {
+    "heartbeat_path": "/sessions/adoring-serene-edison/mnt/Desktop/mote-ops/marketing/heartbeat-2026-06-13.jsonl",
+    "agents_seen": [
+      "vp-tracking"
+    ],
+    "agent_count": 1,
+    "last_heartbeat_ts": "2026-06-13T07:00:00-07:00",
+    "inbox_p0": 0,
+    "inbox_p1": 0,
+    "inbox_items": [
+      {
+        "priority": "P2",
+        "title": "Week 2026-06-08 final closeout tomorrow (Sunday 2026-06-14)",
+        "detail": "Current week closes at midnight Sunday. Qualified count stands at 1 (CC's Learning Center). No new real bookings detected today despite calendar timestamp advancing. Director/daily-pulse should be aware closeout is tomorrow."
+      },
+      {
+        "priority": "P2",
+        "title": "3 self-test events created today for 2026-06-19 (next week)",
+        "detail": "Mike booked 3 Calendly test events (attendees: mikedmote@yahoo.com and mikedmote+workflow-proof-0124@yahoo.com), all for 2026-06-19 10:00\u201312:30 PT. Business names: 'test 2.0', 'Test 123', 'Workflow Proof Dry Run'. All disqualified per prior pattern. Notably the third ('Workflow Proof Dry Run') explicitly describes itself as an end-to-end workflow test for Mote Ops onboarding \u2014 may be probing the intake pipeline. Pattern consistent with 2026-06-04 (4 test events, that week closed 0 qualified).",
+        "test_event_ids": [
+          "5fgulgfa7sskb9hgaceoegp8o0",
+          "mlf0j6ge2b2p0q0u7nku9bm07s",
+          "i4jv1hl61mathq3g4afcp18j5s"
+        ]
+      },
+      {
+        "priority": "P3",
+        "title": "Router queue backlog persists (unverified)",
+        "detail": "notification-router tree inaccessible this run. Last known: ~81k files. Carry forward."
+      },
+      {
+        "priority": "P3",
+        "title": "Doctrine files still unreachable",
+        "detail": "mission.md, vps/tracking/instructions.md, SKILL.md, agent_contract.py not in Desktop mount. Applying reasonable defaults."
+      }
+    ]
+  },
+  "findings": {
+    "items": [
+      {
+        "name": "dashboard-publish-symlink-break-2026-06-06",
+        "path": "file:///sessions/adoring-serene-edison/mnt/Desktop/_audit/findings/dashboard-publish-symlink-break-2026-06-06.md",
+        "status": "fail",
+        "verdict": "",
+        "summary": "The hourly dashboard build could not run. `~/Desktop/dashboard` is no longer a"
+      },
+      {
+        "name": "trading-bot-tool-audit-2026-05-26",
+        "path": "file:///sessions/adoring-serene-edison/mnt/Desktop/_audit/findings/trading-bot-tool-audit-2026-05-26.md",
+        "status": "flag",
+        "verdict": "",
+        "summary": "Deny list is intact. Every required forbidden-verb pattern and every per-broker MCP pattern is present in `~/Desktop/mikes-trading-bot/.clau"
+      }
+    ],
+    "open": 0,
+    "flag": 1
+  },
+  "news": {
+    "headline": "Anthropic launched Claude Fable 5 (1M-token context, 128K output, always-on adaptive thinking) + Claude Platform on AWS. [Platform moves lens] AWS deployment is a direct closer for prospects who won't let data leave their infra. 1M context kills the chunking workaround in document-intelligence builds. Update moteops.tech to name the AWS option; pitch healthcare/legal/finance prospects on it this week.",
+    "ts": "2026-06-13T14:41:36.717251+00:00"
+  },
+  "action_list": {
+    "total": 19,
+    "urgent": 4,
+    "urgent_items": [
+      "Rotate the Anthropic API key at console.anthropic.com \u2014 especially the one copied into 7 files (sk-ant-api03-R0ZCusv...). Full list at `~/Desktop/_audit/CRITICAL-ROTATE.md`.",
+      "Rotate the Moltbook API key at their portal.",
+      "Top up Anthropic credit so morning-trading-brief stops failing daily.",
+      "Plug in a USB drive at home and turn on Time Machine. You currently have zero backups configured."
+    ]
+  },
+  "checkpoint": {
+    "checkpoint_path": "/sessions/adoring-serene-edison/mnt/Desktop/_audit/checkpoint-2026-06-11.log",
+    "checkpoint_summary": "checkpoint-2026-06-11.log",
+    "runtime_path": "/sessions/adoring-serene-edison/mnt/Desktop/_audit/runtime-state-scan-2026-06-08.log",
+    "runtime_summary": "4 missing, 1 extra, 0 mismatch, 7 stale"
+  },
+  "scheduled_tasks": {
+    "available": true,
+    "tasks": [
+      {
+        "taskId": "wiring-probe",
+        "lastRunAt": "2026-05-17T19:36:14.554Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "DISABLED 2026-05-17. Test probe used to verify the Cowork scheduled-tasks dispatcher fires from ~/Documents/Claude/Scheduled/ \u2014 proved successful (34 minute-resolution fires recorded in ~/Desktop/_audit/_wiring-probe.log). Retained disabled for audit."
+      },
+      {
+        "taskId": "moteops-vp-briefing",
+        "lastRunAt": "2026-06-08T16:03:27.400Z",
+        "nextRunAt": "2026-06-15T16:02:30.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Briefing \u2014 Monday 9 AM PT."
+      },
+      {
+        "taskId": "moteops-vp-content",
+        "lastRunAt": "2026-06-11T15:47:25.698Z",
+        "nextRunAt": "2026-06-16T15:01:20.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Content \u2014 Tuesday and Thursday 8 AM PT."
+      },
+      {
+        "taskId": "moteops-vp-tracking",
+        "lastRunAt": "2026-06-13T14:08:24.265Z",
+        "nextRunAt": "2026-06-14T14:08:16.000Z",
+        "enabled": true,
+        "description": "Mote Ops VP Tracking \u2014 daily 7 AM PT."
+      },
+      {
+        "taskId": "moteops-director-weekly",
+        "lastRunAt": "2026-06-08T15:09:15.050Z",
+        "nextRunAt": "2026-06-15T15:08:17.000Z",
+        "enabled": true,
+        "description": "Mote Ops Marketing Director \u2014 Monday 8 AM PT."
+      },
+      {
+        "taskId": "checkpoint",
+        "lastRunAt": "2026-06-13T01:03:39.569Z",
+        "nextRunAt": "2026-06-16T01:02:55.000Z",
+        "enabled": true,
+        "description": "End-of-day git hygiene sweep across ~/Desktop/."
+      },
+      {
+        "taskId": "activity-reconcile",
+        "lastRunAt": "2026-06-08T16:09:54.369Z",
+        "nextRunAt": "2026-06-15T16:08:57.000Z",
+        "enabled": true,
+        "description": "Weekly drift check."
+      },
+      {
+        "taskId": "runtime-state-scan",
+        "lastRunAt": "2026-06-13T14:12:11.219Z",
+        "nextRunAt": "2026-06-14T14:12:03.000Z",
+        "enabled": true,
+        "description": "Daily 7:05 AM scan of live automation state."
+      },
+      {
+        "taskId": "audit-learning-report",
+        "lastRunAt": "2026-06-12T21:38:54.186Z",
+        "nextRunAt": "2026-06-15T21:38:10.000Z",
+        "enabled": true,
+        "description": "Audits the trading bot's latest learning_report.json."
+      },
+      {
+        "taskId": "llm-portfolio-generate",
+        "lastRunAt": "2026-06-01T14:05:37.714Z",
+        "nextRunAt": "2026-07-01T14:04:48.000Z",
+        "enabled": true,
+        "description": "Generate a new 15-stock LLM portfolio on the 1st of each month."
+      },
+      {
+        "taskId": "llm-portfolio-track",
+        "lastRunAt": "2026-06-12T21:12:11.997Z",
+        "nextRunAt": "2026-06-15T21:11:28.000Z",
+        "enabled": true,
+        "description": "Track daily P&L on the active LLM portfolio."
+      },
+      {
+        "taskId": "llm-portfolio-monthly-report",
+        "lastRunAt": "2026-06-03T21:38:16.863Z",
+        "nextRunAt": "2026-07-01T21:38:02.000Z",
+        "enabled": true,
+        "description": "Monthly report for the LLM Portfolio."
+      },
+      {
+        "taskId": "budget-dashboard-sync",
+        "lastRunAt": "2026-06-10T19:08:01.352Z",
+        "nextRunAt": null,
+        "enabled": false,
+        "description": "Budget dashboard Era sync."
+      },
+      {
+        "taskId": "dashboard-publish-hourly",
+        "lastRunAt": "2026-06-13T20:03:55.917Z",
+        "nextRunAt": "2026-06-13T21:03:47.000Z",
+        "enabled": true,
+        "description": "Hourly AIOS dashboard publish during waking hours."
+      },
+      {
+        "taskId": "trading-bot-tool-audit-daily",
+        "lastRunAt": "2026-06-13T13:24:17.187Z",
+        "nextRunAt": "2026-06-14T13:24:09.000Z",
+        "enabled": true,
+        "description": "Daily audit of Squeeze Prophet MCP allow-list and forbidden-verb deny set."
+      },
+      {
+        "taskId": "plan-mode-compliance-daily",
+        "lastRunAt": "2026-06-13T13:32:42.203Z",
+        "nextRunAt": "2026-06-14T13:32:34.000Z",
+        "enabled": true,
+        "description": "Daily verification that all client engagement sessions started in Plan Mode."
+      },
+      {
+        "taskId": "memory-tool-write-audit-daily",
+        "lastRunAt": "2026-06-13T13:48:35.545Z",
+        "nextRunAt": "2026-06-14T13:48:27.000Z",
+        "enabled": true,
+        "description": "Daily audit of Anthropic Memory tool writes for engagements using Managed Agents."
+      },
+      {
+        "taskId": "news-scout",
+        "lastRunAt": "2026-06-13T14:38:31.352Z",
+        "nextRunAt": "2026-06-14T14:38:23.000Z",
+        "enabled": true,
+        "description": "Daily 7:30 AM PT AI/tech news scout."
+      },
+      {
+        "taskId": "intel-weekly",
+        "lastRunAt": "2026-06-08T15:02:26.187Z",
+        "nextRunAt": "2026-06-15T15:01:29.000Z",
+        "enabled": true,
+        "description": "Monday 8 AM PT weekly research on AI capabilities, competitor moves, and new tools/frameworks."
+      }
+    ],
+    "source": "mcp-sidecar"
+  },
+  "calls_this_week": 1,
+  "data_gaps": [
+    "pipeline state (~/mote-ops/pipeline/data/command_state.json) for next call, active prospects, intake verdict",
+    "intel feed (~/mote-ops/ops/.claude/skills/intel/dashboard-feed.json) for weekly observation",
+    "client staged SOWs (~/mote-ops/clients/*/staged_replies/) for approvals queue",
+    "Hermes audit findings (intel-feed repo) for audit-ready items",
+    "Calendly source for calls-this-week metric (vp-tracking reports null)"
+  ]
+}
